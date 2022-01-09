@@ -3,7 +3,7 @@ import img from '../img/loader1.gif';
 
 const Loader = () => {
     return (
-        <img src={img}>
+        <img src={img} style={{maxHeight: '100vh'}}>
 
         </img>
     );

@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import img from '../img/body_title.jpg';
 import downArr from '../img/down_arrow.png';
 import s from './Body.module.css';
 import { Transition, animated, config, useSpring, easings } from 'react-spring';
+import B1Images from '../BodyImages/B1Images';
+import G1Images from '../BodyImages/G1Images';
 
 const Body = () => {
+    //TITLE IMG
     const [showTitle, setShowTitle] = useState(false);
     const {rotateZ} = useSpring({
         from: {
@@ -20,7 +23,8 @@ const Body = () => {
           loop: { reverse: true },
         }
     )
-    
+    //IMG B1
+
     
     return (
         <div className={s.body__wrapper}>
@@ -43,15 +47,8 @@ const Body = () => {
             </Transition>
             </div>
             <div className={s.body__img__wrapper}>
-                <img src={require('../img/b1/b1_1.jpg')} className={s.body__img} />
-                <img src={require('../img/b1/b1_2.jpg')} className={s.body__img} />
-                <img src={require('../img/b1/b1_3.jpg')} className={s.body__img} />
-                <img src={require('../img/b1/b1_4.jpg')} className={s.body__img} />
-                <img src={require('../img/b1/b1_5.jpg')} className={s.body__img} />
-                <img src={require('../img/b1/b1_6.jpg')} className={s.body__img} />
-                <img src={require('../img/b1/b1_7.jpg')} className={s.body__img} />
-                <img src={require('../img/b1/b1_8.jpg')} className={s.body__img} />
-                <img src={require('../img/b1/b1_9.jpg')} className={s.body__img} />
+                <G1Images />
+                <B1Images />
             </div>
         </div>
     );
