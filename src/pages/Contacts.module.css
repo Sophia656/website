@@ -1,0 +1,27 @@
+.contacts__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80vw;
+}
+.img {
+    width: 13vw;
+    height: 31vh;
+}
+.contacts__title {
+    margin-top: -20vh;
+    font-size: 2rem;
+    margin-bottom: 3vh;
+}
+.contacts__text {
+    font-size: 1.3rem;
+    margin-top: 5vh;
+}
+.contacts__links__wrapper {
+    margin-top: 3vh;
+}
+.contacts__links {
+    text-shadow: 1px 1px 1px #181715dc;
+    color: #f1ede3;
+}
