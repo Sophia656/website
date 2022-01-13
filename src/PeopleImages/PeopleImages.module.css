@@ -11,6 +11,7 @@
 .b1 {
     margin-top: 1.5vh;
     margin-bottom: 1.5vh;
+    box-shadow: 0px 5px 12px rgba(41, 38, 35, 0.342), 0px -5px 12px rgba(41, 38, 35, 0.342);
 }
 .slide_b1 {
     padding: 0.2vw;
@@ -24,7 +25,7 @@
 }
 .slide_g1_6 {
     padding: 0.2vw;
-    width: 36vw;
+    width: 38vw;
     height: 46vh;
 }
 

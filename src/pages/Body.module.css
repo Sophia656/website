@@ -20,13 +20,19 @@
     cursor: pointer;
     opacity: 0.6;
 }
-.body__title_arr:hover {
-    width: 3.5vw;
-    height: 3.5vw;
-}
 span {
     margin: -2vh 0;
     color: #f1ede3;
     opacity: 0.3;
+}
+.arr__down {
+    z-index: 10;
+    width: 1.5vw;
+    height: 1.5vw;
+    position: absolute;
+    margin-top: 48vh;
+    margin-left: -7vw;
+    cursor: pointer;
+    opacity: 0.6;
 }
   

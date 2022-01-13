@@ -31,7 +31,7 @@ const G4Images = () => {
     }
 
     return (
-        <div className={`${s.slideshow} ${s.b1}`}>
+        <div className={`${s.slideshow} ${s.b1}`} id='bodyPage3'>
             <img src={require('../img/left_arrow.png')} className={s.body__arr} />
             <AliceCarousel animationType='fadeout' animationDuration='1700' autoWidth keyboardNavigation='true' disableButtonsControls disableDotsControls autoPlay autoPlayInterval='200' infinite='true' items={images} responsive={responsive} />
             <img src={require('../img/right_arrow.png')} className={`${s.body__arr} ${s.right}`} />

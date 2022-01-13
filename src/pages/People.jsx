@@ -6,6 +6,9 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { Transition, animated, config, useSpring, easings } from 'react-spring';
 import P1Images from '../PeopleImages/P1Images';
 import P2Images from '../PeopleImages/P2Images';
+import P3Images from '../PeopleImages/P3Images';
+import P4Images from '../PeopleImages/P4Images';
+import P5Images from '../PeopleImages/P5Images';
 
 const People = () => {
     const [showTitle, setShowTitle] = useState(false);
@@ -54,6 +57,10 @@ const People = () => {
                 <P1Images />
                 <span className={s.span_people}>TO STOP, HOVER OVER THE PHOTO FEED</span>
                 <P2Images />
+                <P3Images />
+                <span className={s.span_people}>TO STOP, HOVER OVER THE PHOTO FEED</span>
+                <P4Images />
+                <P5Images />
             </div>
             :
             <h1> </h1>

@@ -4,6 +4,8 @@
     align-items: center;
     position: relative;
     width: 100vw;
+    background-color: #0f0f0ff3;
+    transition: ease 0.9s;
 }
 .doc__title_img {
     width: 100vw;
@@ -17,8 +19,4 @@
     margin-left: -51.5vw;
     cursor: pointer;
     opacity: 0.6;
-}
-.doc__title_arr:hover {
-    width: 3.5vw;
-    height: 3.5vw;
 }

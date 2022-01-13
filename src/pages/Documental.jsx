@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import img from '../img/doc_title.jpg';
 import downArr from '../img/down_arrow.png';
 import s from './Documental.module.css';
+import { Link, animateScroll as scroll } from "react-scroll";
 import { Transition, animated, config, useSpring, easings } from 'react-spring';
+import DocImages from '../DocImages/DocImages';
 
 const Documental = () => {
     const [showTitle, setShowTitle] = useState(false);
@@ -19,7 +21,11 @@ const Documental = () => {
           },
           loop: { reverse: true },
         }
-    )
+    );
+    //SCROLL
+    // const scrollToBottom = () => {
+    //     scroll.scrollToBottom();
+    // };
 
     return (
         <div className={s.doc__wrapper}>
@@ -36,11 +42,28 @@ const Documental = () => {
                 {(styles, item) =>
                 item && <animated.div style={styles}>
                     <img className={s.doc__title_img} src={img} alt="" />
-                    <animated.img style={{ rotateZ }} className={s.doc__title_arr} src={downArr} alt="" />
+                    <Link
+            activeClass="active"
+            to="docPage1"
+            spy={true}
+            smooth={true}
+            duration={1000}
+            offset={-10}
+            >
+                    <animated.img style={{ rotateZ }} className={s.doc__title_arr} src={downArr} alt="" onMouseMove={{ style: rotateZ }} />
+                    </Link>
                 </animated.div>
                 }
             </Transition>
             </div>
+            {showTitle
+            ?
+            <div>
+                <DocImages />
+            </div>
+            :
+            <h1> </h1>
+            }
         </div>
     );
 };
