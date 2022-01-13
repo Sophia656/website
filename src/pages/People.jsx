@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import img from '../img/people_title.jpg';
 import downArr from '../img/down_arrow.png';
 import s from './People.module.css';
+import { Link, animateScroll as scroll } from "react-scroll";
 import { Transition, animated, config, useSpring, easings } from 'react-spring';
+import P1Images from '../PeopleImages/P1Images';
+import P2Images from '../PeopleImages/P2Images';
 
 const People = () => {
     const [showTitle, setShowTitle] = useState(false);
@@ -19,7 +22,11 @@ const People = () => {
           },
           loop: { reverse: true },
         }
-    )
+    );
+    //SCROLL
+    const scrollToBottom = () => {
+        scroll.scrollToBottom();
+    };
     
     return (
         <div className={s.people__wrapper}>
@@ -36,11 +43,21 @@ const People = () => {
                 {(styles, item) =>
                 item && <animated.div style={styles}>
                     <img className={s.people__title_img} src={img} alt="" />
-                    <animated.img style={{ rotateZ }} className={s.people__title_arr} src={downArr} alt="" />
+                    <animated.img style={{ rotateZ }} className={s.people__title_arr} src={downArr} alt="" onMouseOver={{ style: rotateZ }} onClick={scrollToBottom} />
                 </animated.div>
                 }
             </Transition>
             </div>
+            {showTitle
+            ?
+            <div>
+                <P1Images />
+                <span className={s.span_people}>TO STOP, HOVER OVER THE PHOTO FEED</span>
+                <P2Images />
+            </div>
+            :
+            <h1> </h1>
+            }
         </div>
     );
 };

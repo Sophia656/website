@@ -1,24 +1,24 @@
 .doc__wrapper {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     position: relative;
+    width: 100vw;
 }
 .doc__title_img {
-    position: absolute;
-    z-index: 2;
     width: 100vw;
     height: 100vh;
-    margin-top: -50vh;
-    margin-left: -50vw;
 }
 .doc__title_arr {
-    z-index: 10;
     width: 3vw;
     height: 3vw;
     position: absolute;
-    margin-top: 43vh;
-    margin-left: -1.5vw;
+    margin-top: 94vh;
+    margin-left: -51.5vw;
     cursor: pointer;
     opacity: 0.6;
+}
+.doc__title_arr:hover {
+    width: 3.5vw;
+    height: 3.5vw;
 }

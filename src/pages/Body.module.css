@@ -1,32 +1,32 @@
 .body__wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     position: relative;
     width: 100vw;
     background-color: #100f0c;
-}
-.body__title {
-
+    transition: ease 0.9s;
 }
 .body__title_img {
-    position: absolute;
-    z-index: 2;
     width: 100vw;
     height: 100vh;
-    margin-top: -50vh;
 }
 .body__title_arr {
-    z-index: 10;
     width: 3vw;
     height: 3vw;
     position: absolute;
-    margin-top: 43vh;
-    margin-left: 48.5vw;
+    margin-top: 94vh;
+    margin-left: -51.5vw;
     cursor: pointer;
     opacity: 0.6;
 }
-.body__img__wrapper {
-    margin-top: 224vh;
+.body__title_arr:hover {
+    width: 3.5vw;
+    height: 3.5vw;
 }
+span {
+    margin: -2vh 0;
+    color: #f1ede3;
+    opacity: 0.3;
+}
+  

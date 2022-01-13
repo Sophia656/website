@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Buda:wght@300&family=Unica+One&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Buda:wght@300&family=Poiret+One&family=Unica+One&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Buda:wght@300&family=Poiret+One&family=Unica+One&display=swap'); */
+
 * {
   margin: 0;
   padding: 0;
@@ -15,23 +13,13 @@
 html {
   font-size: 16px;
   background-color: #f1ede3;
+  scroll-behavior: smooth;
 }
 
 .App {
-  width: 100vw;
-  height: 100vh;
   text-align: center;
   font-family: 'Unica One', cursive;
-  /* font-family: 'Buda', cursive; */
-  /* font-family: 'Poiret One', cursive; */
-  /* !!! */
-  /* font-family: 'Bebas Neue';  */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* img {
-  width: 100vw;
-  height: 100vh;
-} */
-
