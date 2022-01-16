@@ -1,7 +1,7 @@
 import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
-import { Link } from 'react-scroll';
+import { Link, animateScroll as scroll } from "react-scroll";
 import s from './DocImages.module.css';
 import downArr from '../img/down_arrow.png';
 
@@ -17,6 +17,9 @@ const DocImages = () => {
         <img className={s.slide_width} src={require('../img/d1/d1_7.jpg')} onDragStart={handleDragStart} />,
         <img className={s.slide} src={require('../img/d1/d1_8.jpg')} onDragStart={handleDragStart} />,
         <img className={s.slide_width} src={require('../img/d1/d1_9.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require('../img/d1/d1_32.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require('../img/d1/d1_33.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require('../img/d1/d1_34.jpg')} onDragStart={handleDragStart} />,
     ];
     const secondImages = [
         <img className={s.slide_width} src={require('../img/d1/d1_10.jpg')} onDragStart={handleDragStart} />,
@@ -45,15 +48,30 @@ const DocImages = () => {
         <img className={s.slide_width} src={require('../img/d1/d1_29.jpg')} onDragStart={handleDragStart} />,
         <img className={s.slide_width} src={require('../img/d1/d1_30.jpg')} onDragStart={handleDragStart} />,
         <img className={s.slide} src={require('../img/d1/d1_31.jpg')} onDragStart={handleDragStart} />,
-    ];
-    const fifthImages = [
-        <img className={s.slide} src={require('../img/d1/d1_32.jpg')} onDragStart={handleDragStart} />,
-        <img className={s.slide_width} src={require('../img/d1/d1_33.jpg')} onDragStart={handleDragStart} />,
-        <img className={s.slide_width} src={require('../img/d1/d1_34.jpg')} onDragStart={handleDragStart} />,
         <img className={s.slide_width} src={require('../img/d1/d1_35.jpg')} onDragStart={handleDragStart} />,
         <img className={s.slide} src={require('../img/d1/d1_36.jpg')} onDragStart={handleDragStart} />,
         <img className={s.slide_width} src={require('../img/d1/d1_37.jpg')} onDragStart={handleDragStart} />,
         <img className={s.slide_width} src={require('../img/d1/d1_38.jpg')} onDragStart={handleDragStart} />,
+    ];
+    const fifthImages = [
+        <img className={s.slide_width} src={require('../img/d1/d1_39.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require('../img/d1/d1_40.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require('../img/d1/d1_41.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require('../img/d1/d1_42.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require('../img/d1/d1_43.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require('../img/d1/d1_44.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require('../img/d1/d1_45.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require('../img/d1/d1_46.jpg')} onDragStart={handleDragStart} />,
+    ];
+    const sixthImages = [
+        <img className={s.slide} src={require('../img/d1/d1_47.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require('../img/d1/d1_48.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require('../img/d1/d1_49.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require('../img/d1/d1_50.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require('../img/d1/d1_51.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require('../img/d1/d1_52.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require('../img/d1/d1_53.jpg')} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require('../img/d1/d1_54.jpg')} onDragStart={handleDragStart} />,
     ];
     const responsive = {
         0: {
@@ -63,6 +81,9 @@ const DocImages = () => {
             items: 5
         }
     }
+    const scrollToTop = () => {
+        scroll.scrollToTop(); 
+    };
 
     return (
         <div>
@@ -78,7 +99,7 @@ const DocImages = () => {
             spy={true}
             smooth={true}
             duration={1000}
-            offset={-10}
+            offset={-25}
             >
                 <img className={s.arr__down} src={downArr} alt="" />
             </Link>
@@ -93,17 +114,34 @@ const DocImages = () => {
                 <img src={require('../img/right_arrow.png')} className={`${s.doc__arr} ${s.right}`} />
             </div>
             <span className={s.span_doc}>TO STOP, HOVER OVER THE PHOTO FEED</span>
+            <Link
+            activeClass="active"
+            to="docPage3"
+            spy={true}
+            smooth={true}
+            duration={1000}
+            offset={-25}
+            >
+                <img className={s.arr__down} src={downArr} alt="" />
+            </Link>
             <div className={`${s.slideshow} ${s.d1}`}>
                 <img src={require('../img/left_arrow.png')} className={s.doc__arr} />
                 <AliceCarousel animationType='fadeout' animationDuration='1700' autoWidth keyboardNavigation='true' disableButtonsControls disableDotsControls autoPlay autoPlayInterval='200' infinite='true' items={fourthImages} responsive={responsive} />
                 <img src={require('../img/right_arrow.png')} className={`${s.doc__arr} ${s.right}`} />
             </div>
-            <div className={`${s.slideshow} ${s.d1}`}>
+            
+            <div className={`${s.slideshow} ${s.d1}`} id='docPage3'>
                 <img src={require('../img/left_arrow.png')} className={s.doc__arr} />
                 <AliceCarousel autoPlayDirection='rtl' animationType='fadeout' animationDuration='1700' autoWidth keyboardNavigation='true' disableButtonsControls disableDotsControls autoPlay autoPlayInterval='200' infinite='true' items={fifthImages} responsive={responsive} />
                 <img src={require('../img/right_arrow.png')} className={`${s.doc__arr} ${s.right}`} />
             </div>
             <span className={s.span_doc}>TO STOP, HOVER OVER THE PHOTO FEED</span>
+            <div className={`${s.slideshow} ${s.d1}`}>
+                <img src={require('../img/left_arrow.png')} className={s.doc__arr} />
+                <AliceCarousel animationType='fadeout' animationDuration='1700' autoWidth keyboardNavigation='true' disableButtonsControls disableDotsControls autoPlay autoPlayInterval='200' infinite='true' items={sixthImages} responsive={responsive} />
+                <img src={require('../img/right_arrow.png')} className={`${s.doc__arr} ${s.right}`} />
+            </div>
+            <img className={s.arr__top} src={downArr} onClick={scrollToTop} />
         </div>
     );
 };

@@ -26,9 +26,8 @@ const People = () => {
           loop: { reverse: true },
         }
     );
-    //SCROLL
-    const scrollToBottom = () => {
-        scroll.scrollToBottom();
+    const scrollToTop = () => {
+        scroll.scrollToTop(); 
     };
     
     return (
@@ -46,7 +45,16 @@ const People = () => {
                 {(styles, item) =>
                 item && <animated.div style={styles}>
                     <img className={s.people__title_img} src={img} alt="" />
-                    <animated.img style={{ rotateZ }} className={s.people__title_arr} src={downArr} alt="" onMouseOver={{ style: rotateZ }} onClick={scrollToBottom} />
+                    <Link
+                    activeClass="active"
+                    to="peoplePage1"
+                    spy={true}
+                    smooth={true}
+                    duration={1000}
+                    offset={-8}
+                    >
+                        <animated.img style={{ rotateZ }} className={s.people__title_arr} src={downArr} />
+                    </Link>
                 </animated.div>
                 }
             </Transition>
@@ -56,11 +64,21 @@ const People = () => {
             <div>
                 <P1Images />
                 <span className={s.span_people}>TO STOP, HOVER OVER THE PHOTO FEED</span>
+                <Link
+                activeClass="active"
+                to="peoplePage2"
+                spy={true}
+                smooth={true}
+                duration={1000}
+                offset={-10}
+                >
+                    <img className={s.arr__down} src={downArr} />
+                </Link>
                 <P2Images />
                 <P3Images />
                 <span className={s.span_people}>TO STOP, HOVER OVER THE PHOTO FEED</span>
                 <P4Images />
-                <P5Images />
+                <img className={s.arr__top} src={downArr} onClick={scrollToTop} />
             </div>
             :
             <h1> </h1>

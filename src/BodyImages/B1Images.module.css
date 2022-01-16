@@ -1,6 +1,5 @@
 .slideshow {
     margin: 0 auto;
-    /* margin-top: -20vh; */
     margin-bottom: 3vh;
     display: flex;
     flex-direction: row;
@@ -9,8 +8,8 @@
     position: relative;
 }
 .b1 {
-    margin-top: 2vh;
-    margin-bottom: 3vh;
+    margin-top: 2.6vh;
+    margin-bottom: 2.6vh;
 }
 .slide_b1 {
     padding: 0.2vw;

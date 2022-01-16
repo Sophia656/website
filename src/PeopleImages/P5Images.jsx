@@ -2,6 +2,7 @@ import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 import s from './PeopleImages.module.css';
+// import { Link, animateScroll, options as Scroll } from "react-scroll";
 
 const P5Images = () => {
     const handleDragStart = (e) => e.preventDefault();
@@ -17,10 +18,10 @@ const P5Images = () => {
         <img className={s.slide_g1_6} src={require('../img/p5/p5_9.jpg')} onDragStart={handleDragStart} />,
         <img className={s.slide_g1} src={require('../img/p5/p5_10.jpg')} onDragStart={handleDragStart} />,
         <img className={s.slide_g1_6} src={require('../img/p5/p5_11.jpg')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1_6} src={require('../img/p5/p5_12.jpg')} onDragStart={handleDragStart} />,
+        // <img className={s.slide_g1_6} src={require('../img/p5/p5_12.jpg')} onDragStart={handleDragStart} />,
         <img className={s.slide_g1} src={require('../img/p5/p5_13.jpg')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1_6} src={require('../img/p5/p5_14.jpg')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1_6} src={require('../img/p5/p5_15.jpg')} onDragStart={handleDragStart} />,
+        // <img className={s.slide_g1_6} src={require('../img/p5/p5_14.jpg')} onDragStart={handleDragStart} />,
+        // <img className={s.slide_g1_6} src={require('../img/p5/p5_15.jpg')} onDragStart={handleDragStart} />,
         <img className={s.slide_g1_6} src={require('../img/p5/p5_16.jpg')} onDragStart={handleDragStart} />,
     ];
     const responsive = {
@@ -31,6 +32,7 @@ const P5Images = () => {
             items: 5
         }
     }
+
 
     return (
         <div className={`${s.slideshow} ${s.b1}`}>

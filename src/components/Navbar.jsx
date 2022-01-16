@@ -9,7 +9,7 @@ const Navbar = ({setShowPages}) => {
             <Link onClick={() => setShowPages(true)} className={s.navbar__links} to='/people'>PEOPLE</Link>
             <Link onClick={() => setShowPages(true)} className={s.navbar__links} to='/documental'>DOCUMENTAL</Link>
             <Link onClick={() => setShowPages(true)} className={s.navbar__links} to='/body'>BODY</Link>
-            <Link onClick={() => setShowPages(true)} className={s.navbar__links} to='/still_life'>STILL LIFE</Link>
+            {/* <Link onClick={() => setShowPages(true)} className={s.navbar__links} to='/still_life'>STILL LIFE</Link> */}
             <Link onClick={() => setShowPages(true)} className={s.navbar__links} to='/contacts'>CONTACTS</Link>
         </div>
     );

@@ -8,19 +8,19 @@
     position: relative;
 }
 .d1 {
-    margin-top: 1.5vh;
-    margin-bottom: 1.5vh;
+    margin-top: 2.6vh;
+    margin-bottom: 2.6vh;
     box-shadow: 0px 5px 12px rgba(78, 78, 77, 0.384), 0px -5px 12px rgba(78, 78, 77, 0.397);
 }
 .slide {
     padding: 0.2vw;
-    width: 19vw;
-    height: 46vh;
+    width: 20vw;
+    height: 43.5vh;
 }
 .slide_width {
     padding: 0.2vw;
-    width: 38vw;
-    height: 46vh;
+    width: 35vw;
+    height: 43.5vh;
 }
 
 .doc__arr {
@@ -35,7 +35,7 @@
     margin-left: 96.7vw;
 }
 .span_doc {
-    margin: -2vh 0;
+    margin-left: 0vw;
     color: rgba(134, 134, 131, 0.918);
     opacity: 0.3;
 }
@@ -44,8 +44,19 @@
     width: 1.5vw;
     height: 1.5vw;
     position: absolute;
-    margin-top: 48vh;
-    margin-left: -7vw;
+    margin-top: 48.5vh;
+    margin-left: -8.7vw;
     cursor: pointer;
     opacity: 0.6;
+}
+.arr__top {
+    z-index: 10;
+    width: 1.5vw;
+    height: 1.5vw;
+    position: absolute;
+    margin-top: -2.8vh;
+    margin-left: -0.6vw;
+    cursor: pointer;
+    transform: rotateX(180deg);
+    opacity: 0.6; 
 }

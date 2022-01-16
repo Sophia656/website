@@ -15,98 +15,25 @@ import G3Images from '../BodyImages/G3Images';
 import G4Images from '../BodyImages/G4Images';
 // const G4Images = React.lazy(() => import('../BodyImages/G4Images'));
 import G5Images from '../BodyImages/G5Images';
+import { scrollToTop } from 'react-scroll/modules/mixins/animate-scroll';
+import AgeVerification from '../components/AgeVerification';
+import BodyContent from './BodyContent';
 // const G5Images = React.lazy(() => import('../BodyImages/G5Images'));
 // import { Link } from 'react-scroll';
 
 const Body = () => {
-    //TITLE IMG
-    const [showTitle, setShowTitle] = useState(false);
-    const {rotateZ} = useSpring({
-        from: {
-            rotateZ: 0,
-          },
-          to: {
-            rotateZ: 360,
-          },
-          config: {
-            duration: 4000,
-            easing: easings.easeInOutQuart,
-          },
-          loop: { reverse: true },
-        }
-    );
-    //SCROLL
-    // const scrollToBottom = () => {
-    //     scroll.scrollToBottom();
-    // };
     
+    //AGE VARIFICATION
+    const [ageVarification, setAgeVarification] = useState(true);
 
     return (
         <div className={s.body__wrapper}>
-            <div>
-                <Transition
-                    items={showTitle}
-                    from={{ opacity: 0 }}
-                    enter={{ opacity: 1 }}
-                    leave={{ opacity: 0 }}
-                    reverse={showTitle}
-                    delay={150}
-                    config={config}
-                    onRest={() => setShowTitle(true)}>
-                    {(styles, item) =>
-                    item && <animated.div style={styles} className={s.body__title}>
-                        <img className={s.body__title_img} src={img} alt="" />
-                        <Link
-                        activeClass="active"
-                        to="bodyPage1"
-                        spy={true}
-                        smooth={true}
-                        duration={1000}
-                        offset={-20}
-                        >
-                            <animated.img style={{ rotateZ }} className={s.body__title_arr} src={downArr} alt="" onMouseOver={{ style: rotateZ}} />
-                        </Link>
-                    </animated.div>
-                    }
-                </Transition>
-            </div>
-            {showTitle
+            {ageVarification
             ?
-            <div className={s.body__img__wrapper}>
-                <G1Images />
-                <span>TO STOP, HOVER OVER THE PHOTO FEED</span>
-                <Link
-                activeClass="active"
-                to="bodyPage2"
-                spy={true}
-                smooth={true}
-                duration={1000}
-                offset={-20}
-                >
-                    <img className={s.arr__down} src={downArr} alt="" />
-                </Link>
-                <B1Images />
-                <G2Images />
-                <span>TO STOP, HOVER OVER THE PHOTO FEED</span>
-                <Link
-                activeClass="active"
-                to="bodyPage3"
-                spy={true}
-                smooth={true}
-                duration={1000}
-                offset={-20}
-                >
-                    <img className={s.arr__down} src={downArr} alt="" />
-                </Link>
-                <G3Images />
-                <G4Images id='bodyPage3' />
-                <span>TO STOP, HOVER OVER THE PHOTO FEED</span>
-                <G5Images />
-            </div>
+            <AgeVerification ageVarification={ageVarification} setAgeVarification={setAgeVarification} />
             :
-            <h1> </h1>
+            <BodyContent />
             }
-            
         </div>
     );
 };

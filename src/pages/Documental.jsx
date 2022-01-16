@@ -48,7 +48,7 @@ const Documental = () => {
             spy={true}
             smooth={true}
             duration={1000}
-            offset={-10}
+            offset={-20}
             >
                     <animated.img style={{ rotateZ }} className={s.doc__title_arr} src={downArr} alt="" onMouseMove={{ style: rotateZ }} />
                     </Link>

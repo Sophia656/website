@@ -16,16 +16,33 @@
     height: 3vw;
     position: absolute;
     margin-top: 94vh;
-    margin-left: -51.5vw;
+    margin-left: -50.6vw;
     cursor: pointer;
     opacity: 0.6;
-}
-.people__title_arr:hover {
-    width: 3.5vw;
-    height: 3.5vw;
 }
 .span_people {
     margin: -2vh 0;
     color: #100f0c;
     opacity: 0.3;
+}
+.arr__down {
+    z-index: 10;
+    width: 1.5vw;
+    height: 1.5vw;
+    position: absolute;
+    margin-top: 49.2vh;
+    margin-left: -7.7vw;
+    cursor: pointer;
+    opacity: 0.6;
+}
+.arr__top {
+    z-index: 10;
+    width: 1.5vw;
+    height: 1.5vw;
+    position: absolute;
+    margin-top: -2.5vh;
+    margin-left: 0.4vw;
+    cursor: pointer;
+    transform: rotateX(180deg);
+    opacity: 0.6; 
 }
