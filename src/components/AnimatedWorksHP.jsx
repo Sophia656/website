@@ -14,7 +14,6 @@ const AnimatedWorksHP = () => {
             duration: 4000,
             easing: easings.easeInOutQuart,
           },
-        //   loop: { reverse: true },
         }
         
     )
