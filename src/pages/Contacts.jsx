@@ -1,5 +1,6 @@
 import React from 'react';
 import img from '../img/about.jpg';
+// import img2 from 'https://drive.google.com/file/d/1TboL5ieETnuwRpwn2RQzY4yO--wpcUOU/view?usp=sharing';
 import s from './Contacts.module.css';
 
 const Contacts = () => {

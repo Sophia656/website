@@ -43,14 +43,14 @@ const Documental = () => {
                 item && <animated.div style={styles}>
                     <img className={s.doc__title_img} src={img} alt="" />
                     <Link
-            activeClass="active"
-            to="docPage1"
-            spy={true}
-            smooth={true}
-            duration={1000}
-            offset={-20}
-            >
-                    <animated.img style={{ rotateZ }} className={s.doc__title_arr} src={downArr} alt="" onMouseMove={{ style: rotateZ }} />
+                    activeClass="active"
+                    to="docPage1"
+                    spy={true}
+                    smooth={true}
+                    duration={1000}
+                    offset={-20}
+                    >
+                    <animated.img style={{ rotateZ }} className={s.doc__title_arr} src={downArr} />
                     </Link>
                 </animated.div>
                 }
