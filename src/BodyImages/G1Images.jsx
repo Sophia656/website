@@ -1,7 +1,7 @@
 import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
-import s from './B1Images.module.css';
+import s from './BodyImages.module.css';
 
 const G1Images = () => {
     const handleDragStart = (e) => e.preventDefault();
@@ -25,7 +25,7 @@ const G1Images = () => {
     return (
         <div className={`${s.slideshow} ${s.b1}`} id='bodyPage1'>
             <img src={require('../img/left_arrow.png')} className={s.body__arr} />
-            <AliceCarousel animationType='fadeout' animationDuration='1700' autoWidth keyboardNavigation='true' disableButtonsControls disableDotsControls autoPlay autoPlayInterval='200' infinite='true' items={images} responsive={responsive} />
+            <AliceCarousel animationType='fadeout' animationDuration='2500' autoWidth keyboardNavigation='true' disableButtonsControls disableDotsControls autoPlay autoPlayInterval='200' infinite='true' items={images} responsive={responsive} />
             <img src={require('../img/right_arrow.png')} className={`${s.body__arr} ${s.right}`} />
         </div>
     );

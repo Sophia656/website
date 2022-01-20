@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import img from '../img/body_title.jpg';
+import img from '../img/body_title3.jpg';
 import downArr from '../img/down_arrow.png';
 import s from './Body.module.css';
 import { Transition, animated, config, useSpring, easings } from 'react-spring';

@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Wire+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Buda:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
 
 * {
   margin: 0;
@@ -31,7 +25,8 @@ html {
 
 .App {
   text-align: center;
-  font-family: 'Unica One', cursive;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
   display: flex;
   justify-content: center;
   align-items: center;

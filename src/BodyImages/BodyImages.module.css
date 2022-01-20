@@ -1,0 +1,40 @@
+.slideshow {
+    margin: 0 auto;
+    margin-bottom: 3vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    position: relative;
+}
+.b1 {
+    margin-top: 2.6vh;
+    margin-bottom: 2.6vh;
+}
+.slide_b1 {
+    padding: 0.2vw;
+    width: 20vw;
+    height: 43.5vh;
+}
+.slide_g1 {
+    padding: 0.2vw;
+    width: 20vw;
+    height: 43.5vh;
+}
+.slide_g1_6 {
+    padding: 0.2vw;
+    width: 35vw;
+    height: 43.5vh;
+}
+
+.body__arr {
+    z-index: 10;
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.6;
+}
+.right {
+    margin-left: 96.7vw;
+}

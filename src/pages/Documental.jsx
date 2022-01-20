@@ -22,10 +22,6 @@ const Documental = () => {
           loop: { reverse: true },
         }
     );
-    //SCROLL
-    // const scrollToBottom = () => {
-    //     scroll.scrollToBottom();
-    // };
 
     return (
         <div className={s.doc__wrapper}>
@@ -47,7 +43,7 @@ const Documental = () => {
                     to="docPage1"
                     spy={true}
                     smooth={true}
-                    duration={1000}
+                    duration={500}
                     offset={-20}
                     >
                     <animated.img style={{ rotateZ }} className={s.doc__title_arr} src={downArr} />
@@ -61,8 +57,7 @@ const Documental = () => {
             <div>
                 <DocImages />
             </div>
-            :
-            <h1> </h1>
+            : <></>
             }
         </div>
     );

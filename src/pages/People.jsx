@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import img from '../img/people_title.jpg';
+import img from '../img/people_title1.jpg';
 import downArr from '../img/down_arrow.png';
 import s from './People.module.css';
 import { Link, animateScroll as scroll } from "react-scroll";
@@ -39,7 +39,6 @@ const People = () => {
                 enter={{ opacity: 1 }}
                 leave={{ opacity: 0 }}
                 reverse={showTitle}
-                delay={0}
                 config={config.stiff}
                 onRest={() => setShowTitle(true)}>
                 {(styles, item) =>
@@ -50,7 +49,7 @@ const People = () => {
                     to="peoplePage1"
                     spy={true}
                     smooth={true}
-                    duration={1000}
+                    duration={500}
                     offset={-8}
                     >
                         <animated.img style={{ rotateZ }} className={s.people__title_arr} src={downArr} />
@@ -69,7 +68,7 @@ const People = () => {
                 to="peoplePage2"
                 spy={true}
                 smooth={true}
-                duration={1000}
+                duration={500}
                 offset={-10}
                 >
                     <img className={s.arr__down} src={downArr} />
@@ -80,8 +79,7 @@ const People = () => {
                 <P4Images />
                 <img className={s.arr__top} src={downArr} onClick={scrollToTop} />
             </div>
-            :
-            <h1> </h1>
+            : <></>
             }
         </div>
     );
