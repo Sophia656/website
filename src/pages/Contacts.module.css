@@ -3,15 +3,14 @@
     flex-direction: column;
     align-items: center;
     width: 80vw;
-    margin-top: 20vh;
-    margin-left: 3vw;
+    margin-top: 25vh;
 }
 .img {
-    width: 13vw;
-    height: 31vh;
+    width: 10vw;
+    height: 23.5vh;
 }
 .contacts__title {
-    font-size: 2rem;
+    font-size: 1.3rem;
     margin-bottom: 3vh;
     color: #181715dc;
 }

@@ -18,10 +18,6 @@ const P4Images = () => {
         <img className={s.slide_g1_6} src={require('../img/p4/p4_10.JPG')} onDragStart={handleDragStart} />,
         <img className={s.slide_g1} src={require('../img/p4/p4_11.JPG')} onDragStart={handleDragStart} />,
         <img className={s.slide_g1} src={require('../img/p4/p4_12.JPG')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/p4/p4_13.JPG')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1_6} src={require('../img/p4/p4_14.JPG')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/p4/p4_15.JPG')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1_6} src={require('../img/p4/p4_16.JPG')} onDragStart={handleDragStart} />,
     ];
     const responsive = {
         0: {
@@ -34,9 +30,19 @@ const P4Images = () => {
 
     return (
         <div className={`${s.slideshow} ${s.b1}`}>
-            <img src={require('../img/left_arrow.png')} className={s.body__arr} />
-            <AliceCarousel animationType='fadeout' animationDuration='2500' autoWidth keyboardNavigation='true' disableButtonsControls disableDotsControls autoPlay autoPlayInterval='200' infinite='true' items={images} responsive={responsive} />
-            <img src={require('../img/right_arrow.png')} className={`${s.body__arr} ${s.right}`} />
+            <AliceCarousel 
+            animationType='fadeout' 
+            animationDuration='2500' 
+            autoWidth 
+            keyboardNavigation='true' 
+            disableButtonsControls 
+            disableDotsControls 
+            autoPlay 
+            autoPlayInterval='200' 
+            infinite='true' 
+            items={images} 
+            responsive={responsive} 
+            />
         </div>
     );
 };

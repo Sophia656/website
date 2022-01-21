@@ -8,7 +8,6 @@ import P1Images from '../PeopleImages/P1Images';
 import P2Images from '../PeopleImages/P2Images';
 import P3Images from '../PeopleImages/P3Images';
 import P4Images from '../PeopleImages/P4Images';
-import P5Images from '../PeopleImages/P5Images';
 
 const People = () => {
     const [showTitle, setShowTitle] = useState(false);

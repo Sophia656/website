@@ -54,17 +54,19 @@
     margin: 1vw;
     font-size: 1.3rem;
     color: #f1ede3;
-    padding: 1vw;
+    padding: 0.65vw;
     border-radius: 0.4vw;
     width: 40%;
     height: 70%;
     cursor: pointer;
+    
 }
 .av__buttons:hover {
     background: rgba(158, 115, 21, 0.63);
 }
 .older {
-    font-family: 'Unica One', cursive;
+    font-family: 'Oswald', sans-serif;
+  font-weight: 400;
 }
 .under {
     text-decoration: none;

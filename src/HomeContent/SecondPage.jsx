@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import s from '../pages/HomePage.module.css';
+import downArr from '../img/down_arrow.png';
 import {
     useChain,
     animated,
@@ -8,18 +9,24 @@ import {
 import PackageOfImgages from '../HomeContent/PackageOfImgages';
 import { useOpenImages } from '../components/hooks/useOpenImages';
 import { useTransitionImages } from '../components/hooks/useTransitionImages';
+import { Link, animateScroll as scroll } from "react-scroll";
+import { useRotateArrow } from '../components/hooks/useRotateArrow';
   
 
 const SecondPage = () => {
+    const {rotateZ} = useRotateArrow();
     const firstImgages = [
         <img className={s.item} src={require('../img/b1/b1_1.jpg')} />,
-        <img className={s.item} src={require('../img/b1/b1_8.jpg')} />,
-        <img className={s.item} src={require('../img/g1/g1_1.jpg')} />,
         <img className={s.item} src={require('../img/g1/g1_4.jpg')} />,
-        <img className={s.item} src={require('../img/g4/g4_1.jpg')} />,
-        <img className={s.item} src={require('../img/g3/g3_2.jpg')} />,
         <img className={s.item} src={require('../img/g3/g3_3.jpg')} />,
         <img className={s.item} src={require('../img/g5/g5_6.jpg')} />,
+        
+        
+        <img className={s.item} src={require('../img/g4/g4_1.jpg')} />,
+        <img className={s.item} src={require('../img/g3/g3_2.jpg')} />,
+        <img className={s.item} src={require('../img/g1/g1_1.jpg')} />,
+        <img className={s.item} src={require('../img/g2/g2_7.jpg')} />,
+        
     ];
     const [over, setOver] = useState(false);
     const [openImages, setOpenImages] = useState(false);
@@ -53,6 +60,15 @@ const SecondPage = () => {
                 </div>
             }
             </animated.div>
+            <Link
+            activeClass="active"
+            to="homePage3"
+            spy={true}
+            smooth={true}
+            duration={500}
+            >
+            <animated.img style={{ rotateZ }} className={s.doc__title_arr2} src={downArr} />
+            </Link>
         </div>
     );
 };

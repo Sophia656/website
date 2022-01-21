@@ -88,9 +88,20 @@ const DocImages = () => {
     return (
         <div>
             <div className={`${s.slideshow} ${s.d1}`} id='docPage1'>
-                <img src={require('../img/left_arrow.png')} className={s.doc__arr} />
-                <AliceCarousel autoPlayDirection='rtl' animationType='fadeout' animationDuration='2500' autoWidth keyboardNavigation='true' disableButtonsControls disableDotsControls autoPlay autoPlayInterval='200' infinite='true' items={images} responsive={responsive} />
-                <img src={require('../img/right_arrow.png')} className={`${s.doc__arr} ${s.right}`} />
+                <AliceCarousel 
+                autoPlayDirection='rtl' 
+                animationType='fadeout' 
+                animationDuration='2500' 
+                autoWidth 
+                keyboardNavigation='true' 
+                disableButtonsControls 
+                disableDotsControls 
+                autoPlay 
+                autoPlayInterval='200' 
+                infinite='true' 
+                items={images} 
+                responsive={responsive} 
+                />
             </div>
             <span className={s.span_doc}>TO STOP, HOVER OVER THE PHOTO FEED</span>
             <Link
@@ -104,14 +115,35 @@ const DocImages = () => {
                 <img className={s.arr__down} src={downArr} alt="" />
             </Link>
             <div className={`${s.slideshow} ${s.d1}`}>
-                <img src={require('../img/left_arrow.png')} className={s.doc__arr} />
-                <AliceCarousel animationType='fadeout' animationDuration='2500' autoWidth keyboardNavigation='true' disableButtonsControls disableDotsControls autoPlay autoPlayInterval='200' infinite='true' items={secondImages} responsive={responsive} />
-                <img src={require('../img/right_arrow.png')} className={`${s.doc__arr} ${s.right}`} />
+                <AliceCarousel 
+                animationType='fadeout' 
+                animationDuration='2500' 
+                autoWidth 
+                keyboardNavigation='true' 
+                disableButtonsControls 
+                disableDotsControls 
+                autoPlay 
+                autoPlayInterval='200' 
+                infinite='true' 
+                items={secondImages} 
+                responsive={responsive} 
+                />
             </div>
             <div className={`${s.slideshow} ${s.d1}`} id='docPage2'>
-                <img src={require('../img/left_arrow.png')} className={s.doc__arr} />
-                <AliceCarousel autoPlayDirection='rtl' animationType='fadeout' animationDuration='2500' autoWidth keyboardNavigation='true' disableButtonsControls disableDotsControls autoPlay autoPlayInterval='200' infinite='true' items={thirdImages} responsive={responsive} />
-                <img src={require('../img/right_arrow.png')} className={`${s.doc__arr} ${s.right}`} />
+                <AliceCarousel 
+                autoPlayDirection='rtl' 
+                animationType='fadeout' 
+                animationDuration='2500' 
+                autoWidth 
+                keyboardNavigation='true' 
+                disableButtonsControls 
+                disableDotsControls 
+                autoPlay 
+                autoPlayInterval='200' 
+                infinite='true'
+                items={thirdImages} 
+                responsive={responsive} 
+                />
             </div>
             <span className={s.span_doc}>TO STOP, HOVER OVER THE PHOTO FEED</span>
             <Link
@@ -125,21 +157,52 @@ const DocImages = () => {
                 <img className={s.arr__down} src={downArr} alt="" />
             </Link>
             <div className={`${s.slideshow} ${s.d1}`}>
-                <img src={require('../img/left_arrow.png')} className={s.doc__arr} />
-                <AliceCarousel animationType='fadeout' animationDuration='2500' autoWidth keyboardNavigation='true' disableButtonsControls disableDotsControls autoPlay autoPlayInterval='200' infinite='true' items={fourthImages} responsive={responsive} />
-                <img src={require('../img/right_arrow.png')} className={`${s.doc__arr} ${s.right}`} />
+                <AliceCarousel 
+                animationType='fadeout' 
+                animationDuration='2500' 
+                autoWidth 
+                keyboardNavigation='true' 
+                disableButtonsControls 
+                disableDotsControls 
+                autoPlay 
+                autoPlayInterval='200' 
+                infinite='true' 
+                items={fourthImages} 
+                responsive={responsive} 
+                />
             </div>
             
             <div className={`${s.slideshow} ${s.d1}`} id='docPage3'>
-                <img src={require('../img/left_arrow.png')} className={s.doc__arr} />
-                <AliceCarousel autoPlayDirection='rtl' animationType='fadeout' animationDuration='2500' autoWidth keyboardNavigation='true' disableButtonsControls disableDotsControls autoPlay autoPlayInterval='200' infinite='true' items={fifthImages} responsive={responsive} />
-                <img src={require('../img/right_arrow.png')} className={`${s.doc__arr} ${s.right}`} />
+                <AliceCarousel 
+                autoPlayDirection='rtl' 
+                animationType='fadeout' 
+                animationDuration='2500' 
+                autoWidth 
+                keyboardNavigation='true' 
+                disableButtonsControls 
+                disableDotsControls 
+                autoPlay 
+                autoPlayInterval='200' 
+                infinite='true'
+                items={fifthImages} 
+                responsive={responsive} 
+                />
             </div>
             <span className={s.span_doc}>TO STOP, HOVER OVER THE PHOTO FEED</span>
             <div className={`${s.slideshow} ${s.d1}`}>
-                <img src={require('../img/left_arrow.png')} className={s.doc__arr} />
-                <AliceCarousel animationType='fadeout' animationDuration='2500' autoWidth keyboardNavigation='true' disableButtonsControls disableDotsControls autoPlay autoPlayInterval='200' infinite='true' items={sixthImages} responsive={responsive} />
-                <img src={require('../img/right_arrow.png')} className={`${s.doc__arr} ${s.right}`} />
+                <AliceCarousel 
+                animationType='fadeout' 
+                animationDuration='2500' 
+                autoWidth 
+                keyboardNavigation='true' 
+                disableButtonsControls 
+                disableDotsControls 
+                autoPlay 
+                autoPlayInterval='200' 
+                infinite='true' 
+                items={sixthImages} 
+                responsive={responsive} 
+                />
             </div>
             <img className={s.arr__top} src={downArr} onClick={scrollToTop} />
         </div>

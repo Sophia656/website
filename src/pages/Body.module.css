@@ -22,14 +22,14 @@
 }
 .body__span {
     margin: -2vh 0;
-    color: #f1ede3;
+    color: #f1ede37a;
 }
 .arr__down {
     z-index: 10;
     width: 1.5vw;
     height: 1.5vw;
     position: absolute;
-    margin-top: 48vh;
+    margin-top: 49vh;
     margin-left: -8.7vw;
     cursor: pointer;
     opacity: 0.6;

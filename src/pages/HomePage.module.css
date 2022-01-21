@@ -11,17 +11,42 @@
   transition: ease 0.9s;
   font-family: 'Oswald', sans-serif;
 }
+.doc__title_arr {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  margin-top: 22vh;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.doc__title_arr2 {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  margin-top: 12vh;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.doc__title_arr3 {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  margin-top: 92vh;
+  cursor: pointer;
+  opacity: 0.6;
+  transform: rotateX(180deg);
+}
 .home_title__wrapper {
   height: 100vh;
   width: 100vw;
 }
 .home__text {
-  margin-top: 19vh;
+  margin-top: 22vh;
   color: #dbcfc0;
   text-shadow: 2px 6px 3px #000;
   font-size: 9rem;
   font-weight: 400;
-  letter-spacing: -0.03rem;
+  letter-spacing: -0.1rem;
   will-change: transform, opacity;
 }
 .home__text:nth-child(2) {
@@ -30,7 +55,7 @@
   font-size: 4.7rem;
 }
 .view_work__wrapper {
-  margin-top: 15vh;
+  margin-top: 12vh;
   color: #dbcfc0;
   text-shadow: 1px 1px 1px #000;
   font-size: 2.4rem;
@@ -64,7 +89,7 @@
   will-change: transform, opacity;
 }
 .title__image1 {
-  margin-right: 49vw;
+  margin-right: 52vw;
   width: 35vw;
   height: 43vh;
   cursor: pointer;
@@ -111,7 +136,7 @@
   text-shadow: 1px 1px 1px #2b2b2b;
   font-weight: 200;
   font-size: 4rem;
-  letter-spacing: -0.05rem;
+  letter-spacing: -0.1rem;
 }
 .home__span2 {
   position: absolute;
@@ -123,5 +148,5 @@
   text-shadow: 1px 1px 1px #2b2b2b;
   font-weight: 200;
   font-size: 4rem;
-  letter-spacing: -0.05rem;
+  letter-spacing: -0.1rem;
 }

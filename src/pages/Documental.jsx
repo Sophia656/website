@@ -5,23 +5,12 @@ import s from './Documental.module.css';
 import { Link, animateScroll as scroll } from "react-scroll";
 import { Transition, animated, config, useSpring, easings } from 'react-spring';
 import DocImages from '../DocImages/DocImages';
+import { useRotateArrow } from '../components/hooks/useRotateArrow';
 
 const Documental = () => {
     const [showTitle, setShowTitle] = useState(false);
-    const {rotateZ} = useSpring({
-        from: {
-            rotateZ: 0,
-          },
-          to: {
-            rotateZ: 360,
-          },
-          config: {
-            duration: 4000,
-            easing: easings.easeInOutQuart,
-          },
-          loop: { reverse: true },
-        }
-    );
+
+    const {rotateZ} = useRotateArrow();
 
     return (
         <div className={s.doc__wrapper}>
