@@ -6,13 +6,13 @@ import s from './BodyImages.module.css';
 const G1Images = () => {
     const handleDragStart = (e) => e.preventDefault();
     const images = [
-        <img className={s.slide_g1} src={require('../img/g1/g1_1.jpg')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/g1/g1_2.jpg')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/g1/g1_3.jpg')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/g1/g1_4.jpg')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/g1/g1_5.jpg')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1_6} src={require('../img/g1/g1_6.jpg')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/g1/g1_7.jpg')} onDragStart={handleDragStart} />,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g1/g1_1.jpg")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g1/g1_2.jpg")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g1/g1_3.jpg")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g1/g1_4.jpg")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g1/g1_5.jpg")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide_width} style={{ backgroundImage: `url(${require("../img/g1/g1_6.jpg")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g1/g1_7.jpg")})` }} onDragStart={handleDragStart}/>,
     ];
     const responsive = {
         0: {
@@ -23,7 +23,7 @@ const G1Images = () => {
         }
     }
     return (
-        <div className={`${s.slideshow} ${s.b1}`} id='bodyPage1'>
+        <div className={s.slideshow} id='bodyPage1'>
             <AliceCarousel 
             animationType='fadeout' 
             animationDuration='2500' 

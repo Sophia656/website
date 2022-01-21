@@ -11,6 +11,7 @@ import { useOpenImages } from '../components/hooks/useOpenImages';
 import { useTransitionImages } from '../components/hooks/useTransitionImages';
 import { Link, animateScroll as scroll } from "react-scroll";
 import { useRotateArrow } from '../components/hooks/useRotateArrow';
+import { useRotateImg } from '../components/hooks/useRotateImg';
   
 
 const SecondPage = () => {
@@ -39,11 +40,13 @@ const SecondPage = () => {
       0,
       openImages ? 0.1 : 0.6
     ]);
+    //animated image
+    const rotateImg = useRotateImg();
     
     return (
         <div className={s.home_page1__wrapper} id='homePage2'>
             <animated.div
-            style={{ ...rest }}
+            style={{ size, ...rest }}
             onClick={() => setOpenImages(openImages => !openImages)}>
             {openImages
             ?
@@ -51,7 +54,7 @@ const SecondPage = () => {
             :
                 <div onMouseOver={() => setOver(true)}
                 onMouseOut={() => setOver(false)}>
-                <animated.img className={s.title__image2} src={require('../img/g1/g1_4.jpg')} />
+                <animated.img style={rotateImg} className={s.title__image2} src={require('../img/g1/g1_4.jpg')} />
                 {over 
                 ? <img className={s.click2} src={require('../img/click.gif')} />
                 : <></>

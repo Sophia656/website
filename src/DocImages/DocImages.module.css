@@ -6,21 +6,19 @@
     align-items: center;
     width: 100vw;
     position: relative;
-}
-.d1 {
     margin-top: 2.6vh;
     margin-bottom: 2.6vh;
     box-shadow: 0px 5px 12px rgba(78, 78, 77, 0.384), 0px -5px 12px rgba(78, 78, 77, 0.397);
 }
 .slide {
-    padding: 0.2vw;
     width: 20vw;
     height: 43.5vh;
+    background-size: 20vw 43.5vh;
 }
 .slide_width {
-    padding: 0.2vw;
     width: 35vw;
     height: 43.5vh;
+    background-size: 35vw 43.5vh;
 }
 .span_doc {
     margin-left: 0vw;
@@ -32,7 +30,7 @@
     width: 1.5vw;
     height: 1.5vw;
     position: absolute;
-    margin-top: 48.5vh;
+    margin-top: 49vh;
     margin-left: -8.7vw;
     cursor: pointer;
     opacity: 0.6;

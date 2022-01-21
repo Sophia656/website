@@ -11,7 +11,7 @@ const HomeText = ({ children }) => {
     opacity: open ? 1 : 0,
     y: open ? 0 : 30,
     from: { opacity: 0, y: 30 },
-    delay: 500,
+    delay: 150,
   })
   
     return (

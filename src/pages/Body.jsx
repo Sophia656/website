@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import img from '../img/body_title3.jpg';
 import downArr from '../img/down_arrow.png';
 import s from './Body.module.css';
 import { Transition, animated, config, useSpring, easings } from 'react-spring';
-import B1Images from '../BodyImages/B1Images';
+// import B1Images from '../BodyImages/B1Images';
 // const B1Images = React.lazy(() => import('../BodyImages/B1Images'));
 import G1Images from '../BodyImages/G1Images';
 // const G1Images = React.lazy(() => import('../BodyImages/G1Images'));
@@ -21,7 +21,22 @@ import BodyContent from './BodyContent';
 // const G5Images = React.lazy(() => import('../BodyImages/G5Images'));
 // import { Link } from 'react-scroll';
 
+
 const Body = () => {
+
+    const [photos, setPhotos] = useState([]);
+
+    useEffect(() => {
+        document.addEventListener('scroll', scrollHandler);
+
+        return function () {
+            document.removeEventListener('scroll', scrollHandler);
+        }
+    }, [])
+
+    const scrollHandler = (e) => {
+        console.log('scroll')
+    }
     
     //AGE VARIFICATION
     const [ageVarification, setAgeVarification] = useState(true);

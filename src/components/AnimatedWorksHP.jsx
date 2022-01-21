@@ -18,7 +18,7 @@ const AnimatedWorksHP = () => {
         duration: 4000,
         easing: easings.easeInOutQuart,
       },
-      delay: 1100,
+      delay: 700,
     })
     return (
         <div>

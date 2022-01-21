@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import s from './HomePage.module.css';
-import { useSpring, config, animated, Transition, easings } from 'react-spring';
+import { useSpring, config, animated, Transition, easings, useSpringRef } from 'react-spring';
 import HomeText from '../components/HomeText';
 import AnimatedWorksHP from '../components/AnimatedWorksHP';
 import { Link } from 'react-scroll';
@@ -11,7 +11,6 @@ import ThirdPage from '../HomeContent/ThirdPage';
 
 const HomePage = () => {
     const [showTitle, setShowTitle] = useState(false);
-
     const {rotateX, rotateZ, opacity} = useSpring({
       from: {
         rotateX: 180,
@@ -27,13 +26,13 @@ const HomePage = () => {
         duration: 4000,
         easing: easings.easeInOutQuart,
       },
-      delay: 1200,
+      delay: 800,
     });
 
 
     return (
-        <div className={s.home__wrapper} id='homePage'>
-            <div className={s.home_title__wrapper}>
+        <div  className={s.home__wrapper} id='homePage'>
+            <div  className={s.home_title__wrapper}>
               <Transition
                 items={showTitle}
                 from={{ opacity: 0 }}

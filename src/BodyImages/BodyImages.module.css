@@ -4,25 +4,31 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    /* height: 43vh; */
     width: 100vw;
     position: relative;
-}
-.b1 {
     margin-top: 2.6vh;
     margin-bottom: 2.6vh;
 }
-.slide_b1 {
-    padding: 0.2vw;
+.slide {
     width: 20vw;
     height: 43.5vh;
+    background-size: 20vw 43.5vh;
 }
-.slide_g1 {
-    padding: 0.2vw;
-    width: 20vw;
-    height: 43.5vh;
-}
-.slide_g1_6 {
-    padding: 0.2vw;
+.slide_width {
     width: 35vw;
     height: 43.5vh;
+    background-size: 35vw 43.5vh;
+}
+@media only screen and (max-width: 768px) {
+    .slide {
+        width: 35vw;
+        height: 33vh;
+        background-size: 35vw 33vh;
+    }
+    .slide_width {
+        width: 60vw;
+        height: 33vh;
+        background-size: 60vw 33vh;
+    }
 }

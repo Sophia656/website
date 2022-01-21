@@ -71,3 +71,12 @@
 .under {
     text-decoration: none;
 }
+@media only screen and (max-width: 768px) {
+    .av__box_wrapper {
+        width: 70vw;
+        height: 70vw;
+    }
+    .av__h3 {
+        height: 20%;
+    }
+}

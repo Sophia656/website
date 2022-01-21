@@ -12,6 +12,7 @@ import PackageOfImgages from '../HomeContent/PackageOfImgages';
 import { useOpenImages } from '../components/hooks/useOpenImages';
 import { useTransitionImages } from '../components/hooks/useTransitionImages';
 import { Link, animateScroll as scroll } from "react-scroll";
+import { useRotateImg } from '../components/hooks/useRotateImg';
   
 
 const ThirdPage = () => {
@@ -39,6 +40,8 @@ const ThirdPage = () => {
     const scrollToTop = () => {
       scroll.scrollToTop(); 
   };
+  //animated image
+  const rotateImg = useRotateImg();
     
     return (
         <div className={s.home_page1__wrapper} id="homePage3">
@@ -51,12 +54,12 @@ const ThirdPage = () => {
             :
                 <div onMouseOver={() => setOver(true)}
                 onMouseOut={() => setOver(false)}>
-                <animated.img className={s.title__image1} src={require('../img/home3/p5_9.jpg')} />
+                <animated.img style={rotateImg} className={s.title__image1} src={require('../img/home3/p5_9.jpg')} />
                 {over 
                 ? <img className={s.click1} src={require('../img/click.gif')} />
                 : <></>
                 }
-                <span style={{color: '#161616', textShadow: '2px 2px 3px #dbcfc0'}} className={s.home__span1}>IN OTHER WORDS,<br/>THE SHOT CAPTURED<br/>IN AN INSTANT<br/>IS THE QUINTESSENCE OF<br/>THE CONSCIOUS AND THE UNCONSCIOUS.</span>
+                <span style={{color: '#202020', textShadow: '3px 2px 1px #dbcfc0a6'}} className={s.home__span1}>IN OTHER WORDS,<br/>THE SHOT CAPTURED<br/>IN AN INSTANT<br/>IS THE QUINTESSENCE OF<br/>THE CONSCIOUS AND THE UNCONSCIOUS.</span>
                 </div>
             }
             </animated.div>

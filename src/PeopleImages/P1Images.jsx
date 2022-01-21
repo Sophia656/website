@@ -6,11 +6,11 @@ import s from './PeopleImages.module.css';
 const P1Images = () => {
     const handleDragStart = (e) => e.preventDefault();
     const images = [
-        <img className={s.slide_g1} src={require('../img/p1/p1_1.jpg')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/p1/p1_2.jpg')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/p1/p1_3.jpg')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/p1/p1_4.jpg')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1_6} src={require('../img/p1/p1_5.jpg')} onDragStart={handleDragStart} />,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p1/p1_1.jpg")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p1/p1_2.jpg")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p1/p1_3.jpg")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p1/p1_4.jpg")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide_width} style={{ backgroundImage: `url(${require("../img/p1/p1_5.jpg")})` }} onDragStart={handleDragStart}/>,
     ];
     const responsive = {
         0: {
@@ -22,7 +22,7 @@ const P1Images = () => {
     }
 
     return (
-        <div className={`${s.slideshow} ${s.b1}`} id='peoplePage1'>
+        <div className={s.slideshow} id='peoplePage1'>
             <AliceCarousel 
             autoPlayDirection='rtl' 
             animationType='fadeout' 

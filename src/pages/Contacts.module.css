@@ -31,3 +31,8 @@
 .contacts__links {
     color: #181715dc;
 }
+@media only screen and (max-width: 768px) {
+    .img {
+        width: 23vw;
+    }
+}

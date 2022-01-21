@@ -6,17 +6,17 @@ import s from './PeopleImages.module.css';
 const P3Images = () => {
     const handleDragStart = (e) => e.preventDefault();
     const images = [
-        <img className={s.slide_g1_6} src={require('../img/p3/p3_1.JPG')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/p3/p3_2.JPG')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/p3/p3_3.JPG')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1_6} src={require('../img/p3/p3_4.JPG')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/p3/p3_5.JPG')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/p3/p3_6.JPG')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/p3/p3_7.JPG')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1_6} src={require('../img/p3/p3_8.JPG')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/p3/p3_9.JPG')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1} src={require('../img/p3/p3_10.JPG')} onDragStart={handleDragStart} />,
-        <img className={s.slide_g1_6} src={require('../img/p3/p3_11.JPG')} onDragStart={handleDragStart} />,
+        <div className={s.slide_width} style={{ backgroundImage: `url(${require("../img/p3/p3_1.JPG")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p3/p3_2.JPG")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p3/p3_3.JPG")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide_width} style={{ backgroundImage: `url(${require("../img/p3/p3_4.JPG")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p3/p3_5.JPG")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p3/p3_6.JPG")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p3/p3_7.JPG")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide_width} style={{ backgroundImage: `url(${require("../img/p3/p3_8.JPG")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p3/p3_9.JPG")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p3/p3_10.JPG")})` }} onDragStart={handleDragStart}/>,
+        <div className={s.slide_width} style={{ backgroundImage: `url(${require("../img/p3/p3_11.JPG")})` }} onDragStart={handleDragStart}/>,
     ];
     const responsive = {
         0: {
@@ -28,7 +28,7 @@ const P3Images = () => {
     }
 
     return (
-        <div className={`${s.slideshow} ${s.b1}`} id='peoplePage2'>
+        <div className={s.slideshow} id='peoplePage2'>
             <AliceCarousel 
             autoPlayDirection='rtl' 
             animationType='fadeout' 
