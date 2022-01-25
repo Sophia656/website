@@ -16,6 +16,9 @@ const P1Images = () => {
         0: {
             items: 1,
         },
+        768: {
+            items: 3,
+        },
         1024: {
             items: 5
         }

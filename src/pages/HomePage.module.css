@@ -16,6 +16,7 @@
   height: 3vw;
   position: absolute;
   margin-top: 22vh;
+  margin-left: -1.5vw;
   cursor: pointer;
   opacity: 0.6;
 }
@@ -24,6 +25,7 @@
   height: 3vw;
   position: absolute;
   margin-top: 12vh;
+  margin-left: -1.5vw;
   cursor: pointer;
   opacity: 0.6;
 }
@@ -89,6 +91,7 @@
   will-change: transform, opacity;
 }
 .title__image1 {
+  margin-top: 0;
   margin-right: 52vw;
   background-size: 35vw 43vh;
   width: 35vw;
@@ -150,4 +153,90 @@
   font-weight: 200;
   font-size: 4rem;
   letter-spacing: -0.1rem;
+}
+.home__span3 {
+  position: absolute;
+  right: 0;
+  text-align: right;
+  margin-right: 5.2vw;
+  margin-top: -2vh;
+  color: #dbcfc0;
+  text-shadow: 1px 1px 1px #2b2b2b;
+  font-weight: 200;
+  font-size: 4rem;
+  letter-spacing: -0.1rem;
+}
+@media only screen and (max-width: 768px) {
+  .home__wrapper {
+    background-size: 190vw 400vh;
+    background-position: center;
+  }
+  .doc__title_arr {
+    width: 8vw;
+    height: 8vw;
+    margin-top: 40vh;
+    margin-left: -3.5vw;
+  }
+  .doc__title_arr2 {
+    width: 8vw;
+    height: 8vw;
+    margin-left: -3.6vw;
+    margin-top: 33vh;
+  }
+  .doc__title_arr3 {
+    width: 8vw;
+    height: 8vw;
+  }
+  .item {
+    max-width: 23vw;
+    max-height: 30vh;
+    will-change: transform, opacity;
+  }
+  .title__image1 {
+    margin-top: -40vh;
+    margin-right: 0vw;
+    background-size: 80vw 43vh;
+    width: 80vw;
+    height: 43vh;
+    cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(82, 78, 73, 0.589);
+  }
+  .title__image2 {
+    margin-left: 0vw;
+    margin-top: -40vh;
+    width: 55vw;
+    height: 54vh;
+    cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(82, 78, 73, 0.589);
+  }
+  .click1 {
+    margin-top: -30vh;
+    margin-left: -1.5vw;
+    width: 32vw;
+    height: 25vw;
+  }
+  .click2 {
+    margin-top: -25vh;
+    margin-left: 70vw;
+    width: 32vw;
+    height: 25vw;
+  }
+  .home__span1 {
+    text-align: center;
+    margin-right: 10vw;
+    margin-top: 10vh;
+    font-size: 3.3rem;
+  }
+  .home__span3 {
+    text-align: center;
+    font-size: 3rem;
+    margin-right: 8vw;
+    margin-top: 10vh;
+  }
+  .home__span2 {
+    text-align: center;
+    margin-left: 7.2vw;
+    margin-top: 16vh;
+    font-size: 3.3rem;
+  }
 }

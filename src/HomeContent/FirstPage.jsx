@@ -1,14 +1,10 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import s from '../pages/HomePage.module.css';
 import downArr from '../img/down_arrow.png';
 import {
     useChain,
     animated,
     useSpringRef,
-    useSpring,
-    easings,
-    useTransition,
-    config,
 } from '@react-spring/web';
 import PackageOfImgages from '../HomeContent/PackageOfImgages';
 import { useOpenImages } from '../components/hooks/useOpenImages';

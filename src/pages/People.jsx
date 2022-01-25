@@ -8,6 +8,7 @@ import P1Images from '../PeopleImages/P1Images';
 import P2Images from '../PeopleImages/P2Images';
 import P3Images from '../PeopleImages/P3Images';
 import P4Images from '../PeopleImages/P4Images';
+import useWindowDimensions from '../components/hooks/useWindowDimensions';
 
 const People = () => {
     const [showTitle, setShowTitle] = useState(false);
@@ -28,6 +29,8 @@ const People = () => {
     const scrollToTop = () => {
         scroll.scrollToTop(); 
     };
+
+    const { width } = useWindowDimensions();
     
     return (
         <div className={s.people__wrapper}>
@@ -42,14 +45,14 @@ const People = () => {
                 onRest={() => setShowTitle(true)}>
                 {(styles, item) =>
                 item && <animated.div style={styles}>
-                    <img className={s.people__title_img} src={img} alt="" />
+                    <div className={s.people__title_img} style={{ backgroundImage: `url(${require("../img/people_title1.jpg")})` }}/>
                     <Link
                     activeClass="active"
                     to="peoplePage1"
                     spy={true}
                     smooth={true}
                     duration={500}
-                    offset={-8}
+                    offset={-18}
                     >
                         <animated.img style={{ rotateZ }} className={s.people__title_arr} src={downArr} />
                     </Link>
@@ -61,7 +64,12 @@ const People = () => {
             ?
             <div>
                 <P1Images />
-                <span className={s.span_people}>TO STOP, HOVER OVER THE PHOTO FEED</span>
+                {width > 912
+                ? <span className={s.span_people}>TO STOP, HOVER OVER THE PHOTO FEED</span>
+                : <span className={s.span_people}>TO STOP THE LANE, CLICK THE PHOTO</span>
+                }
+                {width > 912
+                ?
                 <Link
                 activeClass="active"
                 to="peoplePage2"
@@ -72,11 +80,19 @@ const People = () => {
                 >
                     <img className={s.arr__down} src={downArr} />
                 </Link>
+                : <></>
+                }
                 <P2Images />
                 <P3Images />
-                <span className={s.span_people}>TO STOP, HOVER OVER THE PHOTO FEED</span>
+                {width > 912
+                ? <span className={s.span_people}>TO STOP, HOVER OVER THE PHOTO FEED</span>
+                : <span className={s.span_people}>TO STOP THE LANE, CLICK THE PHOTO</span>
+                }
                 <P4Images />
-                <img className={s.arr__top} src={downArr} onClick={scrollToTop} />
+                {width > 912
+                ? <img className={s.arr__top} src={downArr} onClick={scrollToTop} />
+                : <></>
+                }
             </div>
             : <></>
             }

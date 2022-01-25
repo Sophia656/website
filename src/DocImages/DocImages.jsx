@@ -4,6 +4,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import { Link, animateScroll as scroll } from "react-scroll";
 import s from './DocImages.module.css';
 import downArr from '../img/down_arrow.png';
+import useWindowDimensions from '../components/hooks/useWindowDimensions';
 
 const DocImages = () => {
     const handleDragStart = (e) => e.preventDefault();
@@ -77,6 +78,9 @@ const DocImages = () => {
         0: {
             items: 1,
         },
+        767: {
+            items: 3,
+        },
         1024: {
             items: 5
         }
@@ -84,6 +88,8 @@ const DocImages = () => {
     const scrollToTop = () => {
         scroll.scrollToTop(); 
     };
+
+    const { width } = useWindowDimensions();
 
     return (
         <div>
@@ -103,17 +109,10 @@ const DocImages = () => {
                 responsive={responsive} 
                 />
             </div>
-            <span className={s.span_doc}>TO STOP, HOVER OVER THE PHOTO FEED</span>
-            <Link
-            activeClass="active"
-            to="docPage2"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-20}
-            >
-                <img className={s.arr__down} src={downArr} alt="" />
-            </Link>
+            {width > 768
+            ? <span className={s.body__span}>TO STOP, HOVER OVER THE PHOTO FEED</span>
+            : <span className={s.body__span}>TO STOP THE LANE, CLICK THE PHOTO</span>
+            }
             <div className={s.slideshow}>
                 <AliceCarousel 
                 animationType='fadeout' 
@@ -129,6 +128,20 @@ const DocImages = () => {
                 responsive={responsive} 
                 />
             </div>
+            {width <= 768
+            ? <span className={s.body__span}>TO STOP THE LANE, CLICK THE PHOTO</span>
+            :
+            <Link
+            activeClass="active"
+            to="docPage2"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-20}
+            >
+                <img className={s.arr__down} src={downArr} alt="" />
+            </Link>
+            }
             <div className={s.slideshow} id='docPage2'>
                 <AliceCarousel 
                 autoPlayDirection='rtl' 
@@ -145,17 +158,10 @@ const DocImages = () => {
                 responsive={responsive} 
                 />
             </div>
-            <span className={s.span_doc}>TO STOP, HOVER OVER THE PHOTO FEED</span>
-            <Link
-            activeClass="active"
-            to="docPage3"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-20}
-            >
-                <img className={s.arr__down} src={downArr} alt="" />
-            </Link>
+            {width > 768
+            ? <span className={s.body__span}>TO STOP, HOVER OVER THE PHOTO FEED</span>
+            : <></>
+            }
             <div className={s.slideshow}>
                 <AliceCarousel 
                 animationType='fadeout' 
@@ -171,7 +177,20 @@ const DocImages = () => {
                 responsive={responsive} 
                 />
             </div>
-            
+            {width <= 768
+            ? <span className={s.body__span}>TO STOP THE LANE, CLICK THE PHOTO</span>
+            :
+            <Link
+            activeClass="active"
+            to="docPage3"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-20}
+            >
+                <img className={s.arr__down} src={downArr} alt="" />
+            </Link>
+            }
             <div className={s.slideshow} id='docPage3'>
                 <AliceCarousel 
                 autoPlayDirection='rtl' 
@@ -188,7 +207,10 @@ const DocImages = () => {
                 responsive={responsive} 
                 />
             </div>
-            <span className={s.span_doc}>TO STOP, HOVER OVER THE PHOTO FEED</span>
+            {width > 768
+            ? <span className={s.body__span}>TO STOP, HOVER OVER THE PHOTO FEED</span>
+            : <span className={s.body__span}>TO STOP THE LANE, CLICK THE PHOTO</span>
+            }
             <div className={s.slideshow}>
                 <AliceCarousel 
                 animationType='fadeout' 
@@ -204,7 +226,10 @@ const DocImages = () => {
                 responsive={responsive} 
                 />
             </div>
-            <img className={s.arr__top} src={downArr} onClick={scrollToTop} />
+            {width > 768
+            ? <img className={s.arr__top} src={downArr} onClick={scrollToTop} />
+            : <></>
+            }
         </div>
     );
 };

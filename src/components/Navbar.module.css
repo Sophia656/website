@@ -8,7 +8,7 @@
     z-index: 50;
     top: 0;
     left: 0;
-    margin: 1vh 2vw;
+    margin-top: 1vh;
 }
 .navbar__links {
     text-shadow: 1px 1px 1px #181715dc;

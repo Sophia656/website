@@ -1,34 +1,41 @@
 .slideshow {
     margin: 0 auto;
-    margin-bottom: 3vh;
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* height: 43vh; */
+    height: 47vh;
     width: 100vw;
     position: relative;
-    margin-top: 2.6vh;
-    margin-bottom: 2.6vh;
+    margin-bottom: 1vh;
+}
+.slideshow:nth-child(1) {
+    margin-top: -2.5vh;
 }
 .slide {
     width: 20vw;
-    height: 43.5vh;
-    background-size: 20vw 43.5vh;
+    height: 43vh;
+    background-size: 20vw 43vh;
 }
 .slide_width {
-    width: 35vw;
-    height: 43.5vh;
-    background-size: 35vw 43.5vh;
+    width: 33vw;
+    height: 43vh;
+    background-size: 33vw 43vh;
 }
 @media only screen and (max-width: 768px) {
+    .slideshow {
+        height: 31.6vh;
+    }
+    .slideshow:nth-child(1) {
+        margin-top: -1.5vh;
+    }
     .slide {
-        width: 35vw;
-        height: 33vh;
-        background-size: 35vw 33vh;
+        width: 32vw;
+        height: 30vh;
+        background-size: 32vw 30vh;
     }
     .slide_width {
-        width: 60vw;
-        height: 33vh;
-        background-size: 60vw 33vh;
+        width: 57vw;
+        height: 30vh;
+        background-size: 57vw 30vh;
     }
 }

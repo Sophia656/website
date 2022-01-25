@@ -16,9 +16,6 @@ const B1Images = () => {
         <div className={s.slide} style={{ backgroundImage: `url(${require("../img/b1/b1_6.jpg")})` }} onDragStart={handleDragStart}/>,
         <div className={s.slide} style={{ backgroundImage: `url(${require("../img/b1/b1_7.jpg")})` }} onDragStart={handleDragStart}/>,
     ];
-    // const { height, width } = useWindowDimensions();
-    // console.log(height)
-    // console.log('width', width)
 
     const responsive = {
         0: {
@@ -50,5 +47,5 @@ const B1Images = () => {
         </div>
     );
 };
-// export { B1Images as default } from '../BodyImages/B1Images';
+
 export default B1Images;

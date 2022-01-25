@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 47vh;
     width: 100vw;
     position: relative;
     margin-top: 2.6vh;
@@ -21,7 +22,6 @@
     background-size: 35vw 43.5vh;
 }
 .span_doc {
-    margin-left: 0vw;
     color: rgba(134, 134, 131, 0.918);
     opacity: 0.3;
 }
@@ -30,8 +30,8 @@
     width: 1.5vw;
     height: 1.5vw;
     position: absolute;
-    margin-top: 49vh;
-    margin-left: -8.7vw;
+    margin-top: -2.5vh;
+    margin-left: -0.6vw;
     cursor: pointer;
     opacity: 0.6;
 }
@@ -45,4 +45,21 @@
     cursor: pointer;
     transform: rotateX(180deg);
     opacity: 0.6; 
+}
+@media only screen and (max-width: 768px) {
+    .slideshow {
+        height: 30vh;
+        margin-bottom: 1vh;
+        margin-top: 1vh;
+    }
+    .slide {
+        width: 32vw;
+        height: 28vh;
+        background-size: 32vw 28vh;
+    }
+    .slide_width {
+        width: 57vw;
+        height: 28vh;
+        background-size: 57vw 28vh;
+    }
 }

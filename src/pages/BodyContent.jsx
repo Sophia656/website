@@ -44,7 +44,7 @@ const BodyContent = () => {
         scroll.scrollToTop();
     };
 
-    const { height, width } = useWindowDimensions();
+    const { width } = useWindowDimensions();
 
     return (
         <div>
@@ -60,15 +60,13 @@ const BodyContent = () => {
                         onRest={() => setShowTitle(true)}>
                         {(styles, item) =>
                         item && <animated.div style={styles} className={s.body__title}>
-                            <div className={s.body__title_img} style={{ backgroundImage: `url(${require("../img/body_title3.jpg")})` }}/>,
-                            {/* <img className={s.body__title_img} src={img} /> */}
+                            <div className={s.body__title_img} style={{ backgroundImage: `url(${require("../img/body_title3.jpg")})` }}/>
                             <Link
                             activeClass="active"
                             to="bodyPage1"
                             spy={true}
                             smooth={true}
                             duration={1000}
-                            offset={-20}
                             >
                                 <animated.img style={{ rotateZ }} className={s.body__title_arr} src={downArr} />
                             </Link>
@@ -78,51 +76,70 @@ const BodyContent = () => {
                 {showTitle
                 ?
                 <div className={s.body__img__wrapper}>
+                    
                     <G1Images />
                     {width > 768
                     ? <span className={s.body__span}>TO STOP, HOVER OVER THE PHOTO FEED</span>
                     : <></>
                     }
-                    {/* <span className={s.body__span}>TO STOP, HOVER OVER THE PHOTO FEED</span> */}
+                    {width > 768
+                    ?
                     <Link
                     activeClass="active"
                     to="bodyPage2"
                     spy={true}
                     smooth={true}
                     duration={1000}
-                    offset={-20}
                     >
                         <img className={s.arr__down} src={downArr} />
                     </Link>
+                    : <></>
+                    }
+                    {width <= 768
+                    ? <span className={s.body__span}>TO STOP THE LANE, CLICK THE PHOTO</span>
+                    : <></>
+                    }
                     <B1Images />
+                    {width <= 768
+                    ? <span className={s.body__span}>TO STOP THE LANE, CLICK THE PHOTO</span>
+                    : <></>
+                    }
                     <G2Images />
                     {width > 768
                     ? <span className={s.body__span}>TO STOP, HOVER OVER THE PHOTO FEED</span>
                     : <></>
                     }
-                    {/* <span className={s.body__span}>TO STOP, HOVER OVER THE PHOTO FEED</span> */}
+                    {width > 768
+                    ?
                     <Link
                     activeClass="active"
                     to="bodyPage3"
                     spy={true}
                     smooth={true}
                     duration={1000}
-                    offset={-20}
                     >
                         <img className={s.arr__down} src={downArr} />
                     </Link>
+                    : <></>
+                    }
                     <G3Images />
+                    {width <= 768
+                    ? <span className={s.body__span}>TO STOP THE LANE, CLICK THE PHOTO</span>
+                    : <></>
+                    }
                     <G4Images id='bodyPage3' />
                     {width > 768
                     ? <span className={s.body__span}>TO STOP, HOVER OVER THE PHOTO FEED</span>
+                    : <span className={s.body__span}>TO STOP THE LANE, CLICK THE PHOTO</span>
+                    }
+                    <G5Images />
+                    {width > 768
+                    ? <img className={s.arr__top} src={downArr} onClick={scrollToTop} />
                     : <></>
                     }
-                    {/* <span className={s.body__span}>TO STOP, HOVER OVER THE PHOTO FEED</span> */}
-                    <G5Images />
-                    <img className={s.arr__top} src={downArr} onClick={scrollToTop} />
                 </div>
                 :
-                <h1> </h1>
+                <></>
                 }
             </Suspense>
         </div>

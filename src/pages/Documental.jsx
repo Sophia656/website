@@ -26,7 +26,7 @@ const Documental = () => {
                 onRest={() => setShowTitle(true)}>
                 {(styles, item) =>
                 item && <animated.div style={styles}>
-                    <img className={s.doc__title_img} src={img} alt="" />
+                    <div className={s.doc__title_img} style={{ backgroundImage: `url(${require("../img/doc_title.jpg")})` }}/>
                     <Link
                     activeClass="active"
                     to="docPage1"

@@ -59,7 +59,7 @@ const ThirdPage = () => {
                 ? <img className={s.click1} src={require('../img/click.gif')} />
                 : <></>
                 }
-                <span style={{color: '#202020', textShadow: '3px 2px 1px #dbcfc0a6'}} className={s.home__span1}>IN OTHER WORDS,<br/>THE SHOT CAPTURED<br/>IN AN INSTANT<br/>IS THE QUINTESSENCE OF<br/>THE CONSCIOUS AND THE UNCONSCIOUS.</span>
+                <span style={{color: '#202020', textShadow: '3px 2px 1px #dbcfc0a6'}} className={s.home__span3}>IN OTHER WORDS,<br/>THE SHOT CAPTURED<br/>IN AN INSTANT<br/>IS THE QUINTESSENCE OF<br/>THE CONSCIOUS AND THE UNCONSCIOUS.</span>
                 </div>
             }
             </animated.div>
