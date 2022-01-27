@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import s from '../pages/HomePage.module.css';
+import s from './HomePages.module.css';
 import downArr from '../img/down_arrow.png';
 import {
     useChain,
@@ -43,24 +43,25 @@ const FirstPage = () => {
 
 
     return (
-        <div className={s.home_page1__wrapper} id='homePage1'>
+        <div className={s.home_pages__wrapper} id='homePage1'>
             <animated.div
+            className={s.home_pages__content_wrapper}
             style={{ size, ...rest }}
             onClick={() => setOpenImages(openImages => !openImages)}>
-            {openImages
-            ?
-            <PackageOfImgages transition={transition} />
-            :
-                <div onMouseOver={() => setOver(true)}
-                onMouseOut={() => setOver(false)}>
-                    <animated.img style={rotateImg} className={s.title__image1} src={require('../img/g2/g2_2.jpg')} />
-                    {over
-                    ? <img className={s.click1} src={require('../img/click.gif')} />
-                    : <></>
-                    }
-                    <span className={s.home__span1}>I AM COMMITTED TO A HUMANISTIC<br/>UNDERSTANDING OF LIFE<br/>THAT IS CENTERED ON<br/>THE ESSENCE OF THE HUMAN BEING.</span>
-                </div>
-            }
+                {openImages
+                ?
+                <PackageOfImgages transition={transition} />
+                :
+                    <div className={s.home_pages__visible_content_wrapper} onMouseOver={() => setOver(true)}
+                    onMouseOut={() => setOver(false)}>
+                        <animated.img style={rotateImg} className={s.home_pages__title_image} src={require('../img/g2/g2_2.jpg')} />
+                        {over
+                        ? <img className={s.home_pages__right_click} src={require('../img/click.gif')} />
+                        : <></>
+                        }
+                        <span className={s.home_pages__span}>I AM COMMITTED TO A HUMANISTIC UNDERSTANDING OF LIFE THAT IS CENTERED ON THE ESSENCE OF THE HUMAN BEING.</span>
+                    </div>
+                }
             </animated.div>
             <Link
             activeClass="active"
@@ -70,7 +71,7 @@ const FirstPage = () => {
             duration={500}
             offset={-20}
             >
-            <animated.img style={{ rotateZ }} className={s.doc__title_arr} src={downArr} />
+            <animated.img style={{ rotateZ }} className={s.home_pages__down_arr} src={downArr} />
             </Link>
         </div>
     );

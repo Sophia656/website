@@ -6,11 +6,14 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { Transition, animated, config, useSpring, easings } from 'react-spring';
 import DocImages from '../DocImages/DocImages';
 import { useRotateArrow } from '../components/hooks/useRotateArrow';
+import useWindowDimensions from '../components/hooks/useWindowDimensions';
 
 const Documental = () => {
     const [showTitle, setShowTitle] = useState(false);
 
     const {rotateZ} = useRotateArrow();
+
+    const { width } = useWindowDimensions();
 
     return (
         <div className={s.doc__wrapper}>
@@ -25,15 +28,19 @@ const Documental = () => {
                 config={config.stiff}
                 onRest={() => setShowTitle(true)}>
                 {(styles, item) =>
-                item && <animated.div style={styles}>
+                item && <animated.div className={s.doc__title_wrapper} style={styles}>
                     <div className={s.doc__title_img} style={{ backgroundImage: `url(${require("../img/doc_title.jpg")})` }}/>
+                    {width <= 576
+                    ? <div className={s.doc__mobile_text}>DOCUMENTAL</div>
+                    : <></>
+                    }
                     <Link
                     activeClass="active"
                     to="docPage1"
                     spy={true}
                     smooth={true}
                     duration={500}
-                    offset={-20}
+                    offset={-5}
                     >
                     <animated.img style={{ rotateZ }} className={s.doc__title_arr} src={downArr} />
                     </Link>

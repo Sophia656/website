@@ -15,9 +15,9 @@ const HomeText = ({ children }) => {
   })
   
     return (
-        <div>
+        <div className={s.home_title__text_wrapper}>
       {trail.map(({ ...style }, index) => (
-        <a.div key={index} className={s.home__text} style={style}>
+        <a.div key={index} className={s.home_title__text} style={style}>
           <a.div>{items[index]}</a.div>
         </a.div>
       ))}

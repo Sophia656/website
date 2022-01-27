@@ -6,24 +6,30 @@ import s from './BodyImages.module.css';
 const G4Images = () => {
     const handleDragStart = (e) => e.preventDefault();
     const images = [
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g4/g4_1.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g4/g4_2.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g4/g4_3.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide_width} style={{ backgroundImage: `url(${require("../img/g4/g4_4.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g4/g4_5.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g4/g4_6.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g4/g4_7.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g4/g4_8.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g4/g4_9.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g4/g4_10.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g4/g4_11.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g4/g4_12.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g4/g4_13.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g4/g4_14.jpg")})` }} onDragStart={handleDragStart}/>,
+        <img className={s.slide} src={require("../img/g4/g4_1.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g4/g4_2.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g4/g4_3.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require("../img/g4/g4_4.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g4/g4_5.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g4/g4_6.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g4/g4_7.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g4/g4_8.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g4/g4_9.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g4/g4_10.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g4/g4_11.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g4/g4_12.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g4/g4_13.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g4/g4_14.jpg")} onDragStart={handleDragStart} />,
     ];
     const responsive = {
         0: {
             items: 1,
+        },
+        576: {
+            items: 2,
+        },
+        768: {
+            items: 3,
         },
         1024: {
             items: 5

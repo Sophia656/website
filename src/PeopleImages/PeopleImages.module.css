@@ -4,31 +4,34 @@
     flex-direction: row;
     align-items: center;
     width: 100vw;
-    /* height: 44vh; */
     position: relative;
     margin-top: 2.25vh;
     margin-bottom: 2.35vh;
     box-shadow: 0px 5px 12px rgba(41, 38, 35, 0.342), 0px -5px 12px rgba(41, 38, 35, 0.342);
 }
 .slide {
-    width: 18.5vw;
-    height: 44vh;
-    background-size: 18.5vw 44vh;
+    width: 17.9vw;
+    height: auto;
 }
 .slide_width {
-    width: 36.5vw;
-    height: 44vh;
-    background-size: 36.5vw 44vh;
+    width: 35vw;
+    height: auto;
 }
-@media only screen and (max-width: 912px) {
+/* tablet */
+@media only screen and (max-width: 768px) {
     .slide {
         width: 42.2vw;
-        height: 44.3vh;
-        background-size: 42.2vw 44.3vh;
     }
     .slide_width {
-        width: 80.2vw;
-        height: 44.3vh;
-        background-size: 80.2vw 44.3vh;
+        width: 82.6vw;
+    }
+}
+/* mobile */
+@media only screen and (max-width: 576px) {
+    .slide {
+        width: 50vw;
+    }
+    .slide_width {
+        width: 98vw;
     }
 }

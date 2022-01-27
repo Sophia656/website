@@ -6,17 +6,23 @@ import s from './BodyImages.module.css';
 const G2Images = () => {
     const handleDragStart = (e) => e.preventDefault();
     const images = [
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g2/g2_1.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide_width} style={{ backgroundImage: `url(${require("../img/g2/g2_2.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g2/g2_3.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g2/g2_4.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g2/g2_5.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g2/g2_6.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g2/g2_7.jpg")})` }} onDragStart={handleDragStart}/>,
+        <img className={s.slide} src={require("../img/g2/g2_1.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require("../img/g2/g2_2.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g2/g2_3.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g2/g2_4.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g2/g2_5.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g2/g2_6.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g2/g2_7.jpg")} onDragStart={handleDragStart} />,
     ];
     const responsive = {
         0: {
             items: 1,
+        },
+        576: {
+            items: 2,
+        },
+        768: {
+            items: 3,
         },
         1024: {
             items: 5

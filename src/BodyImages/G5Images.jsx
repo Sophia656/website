@@ -6,19 +6,25 @@ import s from './BodyImages.module.css';
 const G5Images = () => {
     const handleDragStart = (e) => e.preventDefault();
     const images = [
-        <div className={s.slide_width} style={{ backgroundImage: `url(${require("../img/g5/g5_1.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g5/g5_2.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g5/g5_3.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide_width} style={{ backgroundImage: `url(${require("../img/g5/g5_4.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g5/g5_5.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g5/g5_6.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide_width} style={{ backgroundImage: `url(${require("../img/g5/g5_7.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g5/g5_8.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/g5/g5_9.jpg")})` }} onDragStart={handleDragStart}/>,
+        <img className={s.slide_width} src={require("../img/g5/g5_1.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g5/g5_2.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g5/g5_3.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require("../img/g5/g5_4.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g5/g5_5.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g5/g5_6.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide_width} src={require("../img/g5/g5_7.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g5/g5_8.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/g5/g5_9.jpg")} onDragStart={handleDragStart} />,
     ];
     const responsive = {
         0: {
             items: 1,
+        },
+        576: {
+            items: 2,
+        },
+        768: {
+            items: 3,
         },
         1024: {
             items: 5

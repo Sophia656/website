@@ -34,7 +34,6 @@ const People = () => {
     
     return (
         <div className={s.people__wrapper}>
-            <div>
             <Transition
                 items={showTitle}
                 from={{ opacity: 0 }}
@@ -44,8 +43,12 @@ const People = () => {
                 config={config.stiff}
                 onRest={() => setShowTitle(true)}>
                 {(styles, item) =>
-                item && <animated.div style={styles}>
+                item && <animated.div className={s.people__title_wrapper} style={styles}>
                     <div className={s.people__title_img} style={{ backgroundImage: `url(${require("../img/people_title1.jpg")})` }}/>
+                    {width <= 576
+                    ? <div className={s.people__mobile_text}>PEOPLE</div>
+                    : <></>
+                    }
                     <Link
                     activeClass="active"
                     to="peoplePage1"
@@ -59,16 +62,16 @@ const People = () => {
                 </animated.div>
                 }
             </Transition>
-            </div>
             {showTitle
             ?
             <div>
                 <P1Images />
-                {width > 912
+                {width > 768
                 ? <span className={s.span_people}>TO STOP, HOVER OVER THE PHOTO FEED</span>
                 : <span className={s.span_people}>TO STOP THE LANE, CLICK THE PHOTO</span>
                 }
-                {width > 912
+                <P2Images />
+                {width > 768
                 ?
                 <Link
                 activeClass="active"
@@ -80,16 +83,15 @@ const People = () => {
                 >
                     <img className={s.arr__down} src={downArr} />
                 </Link>
-                : <></>
+                : <span className={s.span_people}>TO STOP THE LANE, CLICK THE PHOTO</span>
                 }
-                <P2Images />
                 <P3Images />
-                {width > 912
+                {width > 768
                 ? <span className={s.span_people}>TO STOP, HOVER OVER THE PHOTO FEED</span>
                 : <span className={s.span_people}>TO STOP THE LANE, CLICK THE PHOTO</span>
                 }
                 <P4Images />
-                {width > 912
+                {width > 768
                 ? <img className={s.arr__top} src={downArr} onClick={scrollToTop} />
                 : <></>
                 }

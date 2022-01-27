@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import s from '../pages/HomePage.module.css';
+import s from './HomePages.module.css';
 import downArr from '../img/down_arrow.png';
 import {
     useChain,
@@ -44,24 +44,26 @@ const SecondPage = () => {
     const rotateImg = useRotateImg();
     
     return (
-        <div className={s.home_page1__wrapper} id='homePage2'>
+        <div className={s.home_pages__wrapper} id='homePage2'>
             <animated.div
+            className={s.home_pages__content_wrapper}
             style={{ size, ...rest }}
             onClick={() => setOpenImages(openImages => !openImages)}>
-            {openImages
-            ?
-            <PackageOfImgages transition={transition} />
-            :
-                <div onMouseOver={() => setOver(true)}
+                {openImages
+                ?
+                <PackageOfImgages transition={transition} />
+                :
+                <div className={s.home_pages__visible_content_wrapper} onMouseOver={() => setOver(true)}
                 onMouseOut={() => setOver(false)}>
-                <animated.img style={rotateImg} className={s.title__image2} src={require('../img/g1/g1_4.jpg')} />
+                    
+                <span className={s.home_pages__span2}>WHERE FORM AND CONTENT ARE INEXTRICABLY LINKED AND THE HUMAN BODY IS A REFLECTION OF HIS INNER WORLD.</span>
                 {over 
-                ? <img className={s.click2} src={require('../img/click.gif')} />
-                : <></>
-                }
-                <span className={s.home__span2}>WHERE FORM AND CONTENT<br/>ARE INEXTRICABLY LINKED<br/>AND THE HUMAN BODY<br/>IS A REFLECTION OF HIS INNER WORLD.</span>
+                    ? <img className={s.home_pages__left_click} src={require('../img/click.gif')} />
+                    : <></>
+                    }
+                <animated.img style={rotateImg} className={s.home_pages__title_image_vertical} src={require('../img/g1/g1_4.jpg')} />
                 </div>
-            }
+                }
             </animated.div>
             <Link
             activeClass="active"
@@ -70,7 +72,7 @@ const SecondPage = () => {
             smooth={true}
             duration={500}
             >
-            <animated.img style={{ rotateZ }} className={s.doc__title_arr2} src={downArr} />
+            <animated.img style={{ rotateZ }} className={s.home_pages__down_arr} src={downArr} />
             </Link>
         </div>
     );

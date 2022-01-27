@@ -6,20 +6,23 @@ import s from './PeopleImages.module.css';
 const P2Images = () => {
     const handleDragStart = (e) => e.preventDefault();
     const images = [
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p2/p2_1.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p2/p2_2.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p2/p2_3.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p2/p2_4.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p2/p2_5.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p2/p2_6.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p2/p2_7.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p2/p2_8.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p2/p2_9.jpg")})` }} onDragStart={handleDragStart}/>,
-        <div className={s.slide} style={{ backgroundImage: `url(${require("../img/p2/p2_10.jpg")})` }} onDragStart={handleDragStart}/>,
+        <img className={s.slide} src={require("../img/p2/p2_1.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/p2/p2_2.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/p2/p2_3.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/p2/p2_4.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/p2/p2_5.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/p2/p2_6.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/p2/p2_7.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/p2/p2_8.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/p2/p2_9.jpg")} onDragStart={handleDragStart} />,
+        <img className={s.slide} src={require("../img/p2/p2_10.jpg")} onDragStart={handleDragStart} />,
     ];
     const responsive = {
         0: {
             items: 1,
+        },
+        576: {
+            items: 2,
         },
         768: {
             items: 3,

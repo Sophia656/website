@@ -66,7 +66,7 @@
 }
 .older {
     font-family: 'Oswald', sans-serif;
-  font-weight: 400;
+    font-weight: 400;
 }
 .under {
     text-decoration: none;
@@ -78,5 +78,19 @@
     }
     .av__h3 {
         height: 20%;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .av__box_wrapper {
+        width: 90vw;
+        height: 100vw;
+    }
+    .av__h3 {
+        height: 20%;
+        font-size: 2.3rem;
+    }
+    .av__buttons {
+        padding: 1vw;
+        
     }
 }

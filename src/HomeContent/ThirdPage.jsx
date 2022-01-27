@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import s from '../pages/HomePage.module.css';
+import s from './HomePages.module.css';
 import downArr from '../img/down_arrow.png';
 import {
     useChain,
@@ -44,26 +44,27 @@ const ThirdPage = () => {
   const rotateImg = useRotateImg();
     
     return (
-        <div className={s.home_page1__wrapper} id="homePage3">
+        <div className={s.home_pages__wrapper} id="homePage3">
             <animated.div
+            className={s.home_pages__content_wrapper}
             style={rest}
             onClick={() => setOpenImages(openImages => !openImages)}>
-            {openImages
-            ?
-            <PackageOfImgages transition={transition} />
-            :
-                <div onMouseOver={() => setOver(true)}
+              {openImages
+              ?
+              <PackageOfImgages transition={transition} />
+              :
+                <div className={s.home_pages__visible_content_wrapper} onMouseOver={() => setOver(true)}
                 onMouseOut={() => setOver(false)}>
-                <animated.img style={rotateImg} className={s.title__image1} src={require('../img/home3/p5_9.jpg')} />
-                {over 
-                ? <img className={s.click1} src={require('../img/click.gif')} />
-                : <></>
-                }
-                <span style={{color: '#202020', textShadow: '3px 2px 1px #dbcfc0a6'}} className={s.home__span3}>IN OTHER WORDS,<br/>THE SHOT CAPTURED<br/>IN AN INSTANT<br/>IS THE QUINTESSENCE OF<br/>THE CONSCIOUS AND THE UNCONSCIOUS.</span>
+                <animated.img style={rotateImg} className={s.home_pages__title_image} src={require('../img/home3/p5_9.jpg')} />
+                  {over 
+                  ? <img className={s.home_pages__right_click} src={require('../img/click.gif')} />
+                  : <></>
+                  }
+                <span style={{color: '#202020', textShadow: '3px 2px 1px #dbcfc0a6'}} className={s.home_pages__span}>IN OTHER WORDS, THE SHOT CAPTURED IN AN INSTANT IS THE QUINTESSENCE OF THE CONSCIOUS AND THE UNCONSCIOUS.</span>
                 </div>
-            }
+              }
             </animated.div>
-            <animated.img className={s.doc__title_arr3} src={downArr} onClick={scrollToTop} />
+            <animated.img className={s.home_pages__top_arr} src={downArr} onClick={scrollToTop} />
         </div>
     );
 };

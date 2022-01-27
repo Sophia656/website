@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import s from './Contacts.module.css';
-import img from '../img/about.jpg';
+import img from '../img/about2.jpg';
 import heart from '../img/heart.png';
 import { animated, useSpring } from 'react-spring';
 
@@ -84,9 +84,7 @@ const Contacts = () => {
 
     return (
         <div className={s.contacts__wrapper}>
-            <h2 className={s.contacts__title}>ANTROPOVA SOPHIA</h2>
             <img src={img} className={s.img} alt="#" />
-            <div className={s.img}></div>
             <span className={s.contacts__text}>Based in Moscow.</span>
             <div className={s.contacts__links__wrapper}>
                 <span className={s.contacts__span_links}>inst: </span>
@@ -105,6 +103,7 @@ const Contacts = () => {
                 <span className={s.contacts__span_links}>mail: </span>
                 <a className={s.contacts__links} href="mailto:antropovasophia@gmail.com">antropovasophia@gmail.com</a>
             </div>
+            <h2 className={s.contacts__title}>ANTROPOVA SOPHIA</h2>
         </div>
     );
 };

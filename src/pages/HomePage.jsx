@@ -31,8 +31,8 @@ const HomePage = () => {
 
 
     return (
-        <div  className={s.home__wrapper} id='homePage'>
-            <div  className={s.home_title__wrapper}>
+        <div className={s.home__wrapper} id='homePage'>
+            <div className={s.home_title__wrapper}>
               <Transition
                 items={showTitle}
                 from={{ opacity: 0 }}
@@ -55,7 +55,7 @@ const HomePage = () => {
                     smooth={true}
                     duration={500}
                     >
-                      <animated.div className={s.view_work__wrapper}>
+                      <animated.div className={s.home_title__btn_wrapper}>
                         <animated.div style={{ rotateX, rotateZ, opacity }}>view</animated.div>
                         <AnimatedWorksHP />
                       </animated.div>

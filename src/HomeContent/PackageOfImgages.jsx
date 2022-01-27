@@ -1,10 +1,10 @@
 import React from 'react';
-import s from '../pages/HomePage.module.css';
+import s from './HomePages.module.css';
 import { animated } from '@react-spring/web';
 
 const PackageOfImgages = ({transition}) => {
     return (
-        <div className={s.container}>
+        <div className={s.home_pages__images_container}>
             {transition((style, item) => (
             <animated.div
             className={s.item}

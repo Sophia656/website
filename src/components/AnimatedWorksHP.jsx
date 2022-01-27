@@ -22,7 +22,7 @@ const AnimatedWorksHP = () => {
     })
     return (
         <div>
-            <animated.div style={{ rotateX, rotateZ, opacity }} className={s.works}>works</animated.div>
+            <animated.div style={{ rotateX, rotateZ, opacity }} className={s.home_title__btn}>works</animated.div>
         </div>
     );
 };

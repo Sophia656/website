@@ -26,7 +26,9 @@ const NamePage = () => {
 
             {(styles, item) =>
             item && 
-                <h1 style={styles} className={s.name}>ANTROPOVA SOPHIA</h1>
+                <div className={s.container}>
+                    <h1 style={styles} className={s.name}>ANTROPOVA SOPHIA</h1>
+                </div>
             }
             </Transition>
             }
