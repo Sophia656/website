@@ -29,7 +29,6 @@ const SecondPage = () => {
         <img className={s.item} src={require('../img/g2/g2_7.jpg')} />,
         
     ];
-    const [over, setOver] = useState(false);
     const [openImages, setOpenImages] = useState(false);
 
     const springApi = useSpringRef();
@@ -53,14 +52,10 @@ const SecondPage = () => {
                 ?
                 <PackageOfImgages transition={transition} />
                 :
-                <div className={s.home_pages__visible_content_wrapper} onMouseOver={() => setOver(true)}
-                onMouseOut={() => setOver(false)}>
+                <div className={s.home_pages__visible_content_wrapper}>
                     
                 <span className={s.home_pages__span2}>WHERE FORM AND CONTENT ARE INEXTRICABLY LINKED AND THE HUMAN BODY IS A REFLECTION OF HIS INNER WORLD.</span>
-                {over 
-                    ? <img className={s.home_pages__left_click} src={require('../img/click.gif')} />
-                    : <></>
-                    }
+                <img className={s.home_pages__left_click} src={require('../img/click.gif')} />
                 <animated.img style={rotateImg} className={s.home_pages__title_image_vertical} src={require('../img/g1/g1_4.jpg')} />
                 </div>
                 }

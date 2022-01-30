@@ -22,34 +22,11 @@
     font-size: 1.5rem;
 }
 .burger_btn {
-    width: 30px;
-    height: 20px;
-    margin-left: 85vw;
+    width: 7vw;
+    margin-left: 90vw;
     position: relative;
     z-index: 30;
-}
-.burger_btn::before {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    width: 30px;
-    background-color: #181715dc;
-    height: 2px;
-}
-.burger_btn span {
-    position: absolute;
-    top: 9px;
-    width: 30px;
-    background-color: #181715dc;
-    height: 2px;
-}
-.burger_btn::after {
-    content: ' ';
-    position: absolute;
-    bottom: 0;
-    width: 30px;
-    background-color: #181715dc;
-    height: 2px;
+    opacity: 0.9;
 }
 .menu {
     position: fixed;

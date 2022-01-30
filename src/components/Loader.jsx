@@ -1,7 +1,7 @@
 import React from 'react';
 import loader_web from '../img/loader1.gif';
 import loader_tab from '../img/loader2.gif';
-import loader_mob from '../img/loader3.gif';
+import loader_mob from '../img/loader5.gif';
 import useWindowDimensions from './hooks/useWindowDimensions';
 
 const Loader = () => {

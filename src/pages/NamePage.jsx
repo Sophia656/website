@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import s from './NamePage.module.css';
-import { Transition, animated, config } from 'react-spring';
+import { Transition, config } from 'react-spring';
 import AppRouter from '../AppRouter';
-// const AppRouter = React.lazy(() => import('../AppRouter'));
 
 const NamePage = () => {
     const [showName, setShowName] = useState(false);

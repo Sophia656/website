@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import img from '../img/doc_title.jpg';
 import downArr from '../img/down_arrow.png';
 import s from './Documental.module.css';
 import { Link, animateScroll as scroll } from "react-scroll";
-import { Transition, animated, config, useSpring, easings } from 'react-spring';
-import DocImages from '../DocImages/DocImages';
+import { Transition, animated, config } from 'react-spring';
 import { useRotateArrow } from '../components/hooks/useRotateArrow';
 import useWindowDimensions from '../components/hooks/useWindowDimensions';
+import D1Images from '../DocImages/D1Images';
+import DocContent from './DocContent';
 
 const Documental = () => {
     const [showTitle, setShowTitle] = useState(false);
@@ -51,7 +51,7 @@ const Documental = () => {
             {showTitle
             ?
             <div>
-                <DocImages />
+                <DocContent />
             </div>
             : <></>
             }

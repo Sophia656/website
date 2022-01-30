@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import img from '../img/people_title1.jpg';
 import downArr from '../img/down_arrow.png';
 import s from './People.module.css';
 import { Link, animateScroll as scroll } from "react-scroll";

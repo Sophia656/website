@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import s from './HomePage.module.css';
-import { useSpring, config, animated, Transition, easings, useSpringRef } from 'react-spring';
+import { useSpring, config, animated, Transition, easings } from 'react-spring';
 import HomeText from '../components/HomeText';
 import AnimatedWorksHP from '../components/AnimatedWorksHP';
 import { Link } from 'react-scroll';

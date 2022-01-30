@@ -21,12 +21,11 @@ const ThirdPage = () => {
       <img className={s.item} src={require('../img/home3/h1_3.JPG')} />,
       <img className={s.item} src={require('../img/home3/p5_1.jpg')} />, 
       <img className={s.item} src={require('../img/b1/b1_2.jpg')} />,
-      <img className={s.item} src={require('../img/d1/d1_14.jpg')} />,
+      <img className={s.item} src={require('../img/d2/d2_5.jpg')} />,
       <img className={s.item} src={require('../img/home3/h1_1.JPG')} />,
       <img className={s.item} src={require('../img/home3/h1_2.jpg')} />,
       <img className={s.item} src={require('../img/g4/g4_9.jpg')} />,
     ];
-    const [over, setOver] = useState(false);
     const [openImages, setOpenImages] = useState(false);
 
     const springApi = useSpringRef();
@@ -53,13 +52,9 @@ const ThirdPage = () => {
               ?
               <PackageOfImgages transition={transition} />
               :
-                <div className={s.home_pages__visible_content_wrapper} onMouseOver={() => setOver(true)}
-                onMouseOut={() => setOver(false)}>
+                <div className={s.home_pages__visible_content_wrapper}>
                 <animated.img style={rotateImg} className={s.home_pages__title_image} src={require('../img/home3/p5_9.jpg')} />
-                  {over 
-                  ? <img className={s.home_pages__right_click} src={require('../img/click.gif')} />
-                  : <></>
-                  }
+                <img className={s.home_pages__right_click} src={require('../img/click.gif')} />
                 <span style={{color: '#202020', textShadow: '3px 2px 1px #dbcfc0a6'}} className={s.home_pages__span}>IN OTHER WORDS, THE SHOT CAPTURED IN AN INSTANT IS THE QUINTESSENCE OF THE CONSCIOUS AND THE UNCONSCIOUS.</span>
                 </div>
               }

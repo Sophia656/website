@@ -58,7 +58,7 @@
 .people__mobile_text {
     position: absolute;
     transform: rotateZ(270deg);
-    font-size: 22rem;
+    font-size: 17rem;
     color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #f1ede3e3;

@@ -39,7 +39,7 @@
     height: 1.5vw;
     position: absolute;
     margin-top: 49vh;
-    margin-left: -8.7vw;
+    margin-left: -6.7vw;
     cursor: pointer;
     opacity: 0.6;
 }
@@ -57,7 +57,7 @@
 .body__mobile_text {
     position: absolute;
     transform: rotateZ(270deg);
-    font-size: 25rem;
+    font-size: 21rem;
     color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #f1ede3e3;
