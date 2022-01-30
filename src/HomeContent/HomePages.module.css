@@ -65,14 +65,14 @@
 }
 .home_pages__right_click {
     margin-left: -65vw;
-    z-index: 50;
+    z-index: 150;
     width: 18vw;
     height: 15vw;
     filter: drop-shadow(3px 3px 5px rgba(82, 78, 73, 0.589));
 }
 .home_pages__left_click {
     margin-right: -60vw;
-    z-index: 50;
+    z-index: 150;
     width: 18vw;
     height: 15vw;
     transform: rotateY(180deg);
